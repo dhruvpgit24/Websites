@@ -1,0 +1,436 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    
+}
+.poppins-light {
+    font-family: "Poppins", serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+nav{
+    height: 50px;
+    width: 100%;
+    background-color: bisque;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* position: sticky; */
+    /* top: 0; */
+    overflow: hidden;
+    /* z-index: 1; */
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+.nav-bar{
+    display: none;
+}
+.logo{
+    margin-left: 20px;
+    letter-spacing: 4px;
+}
+ul{
+    display: flex;
+    list-style: none;
+    margin-right: 20px;
+}
+ul li a{
+    margin-left: 45px;
+    font-size: 14px;
+    color: black;
+}
+.herosec{
+    overflow: hidden;
+}
+.mainimg{
+    height: 90vh;
+    width: 100vw;
+}
+.LeCatering{
+    position: absolute;
+    font-size: 25px;
+    bottom: 40px;
+    left: 30px;
+    letter-spacing: 8px;
+}
+.aboutsecimg img{
+    height: 500px;
+    width: 400px;
+    margin-left: 190px;
+    margin-top: 60px;
+    filter: blur(0.3px);
+    box-shadow: 0 0 20px black;
+}
+.aboutsecimg{
+    display: flex;
+}
+.aboutpara h2{
+    margin-left: 125px;
+    margin-top: 65px;
+    letter-spacing: 5px;
+}
+.aboutpara h4{
+    margin-left: 140px;
+    margin-top: 45px;
+    letter-spacing: 3px;
+}
+.aboutparamain{
+    height: 100px;
+    width: 450px;
+    margin-left: 35px;
+    margin-top: 20px;
+    font-size: 14px;
+}
+.seasonal{
+    background-color: rgb(255, 201, 201);
+}
+.aboutparamain2{
+    width: 430px;
+    margin-top: 45px;
+    margin-left: 35px;
+    color: rgb(252, 97, 97);
+    font-size: 14px;
+    line-height: 2;
+    /* word-spacing: 20px; */
+}
+.divider{
+    height: 1px;
+    width: 1215px;
+    background-color: rgb(205, 205, 205);
+    margin-top: 80px;
+}
+.ourmenupara h1{
+    margin-top: 80px;
+    margin-left: 318px;
+
+}
+.BreadBasket{
+    margin-left: 200px;
+    margin-top: 50px;
+}
+.bread{
+    margin-left: 200px;
+    margin-top: 20px;
+    font-size: 12px;
+}
+.honeywithfruits{
+    margin-left: 200px;
+    margin-top: 50px;
+}
+.honey{
+    margin-left: 200px;
+    margin-top: 20px;
+    font-size: 12px;
+}
+.belgianwaffle{
+    margin-left: 200px;
+    margin-top: 50px;
+}
+.belgian{
+    margin-left: 200px;
+    margin-top: 20px;
+    font-size: 12px;
+}
+.Scrambledeggs{
+    margin-left: 200px;
+    margin-top: 50px;
+}
+.eggs{
+    margin-left: 200px;
+    margin-top: 20px;
+    font-size: 12px;
+}
+.BlueberryPancakes{
+    margin-left: 200px;
+    margin-top: 50px;
+}
+.Blueberry{
+    margin-left: 200px;
+    margin-top: 20px;
+    font-size: 12px;
+}
+.ourmenu{
+    display: flex;
+}
+.ourmenuimg img{
+    height: 550px;
+    margin-top: 80px;
+    margin-left: 85px;
+    box-shadow: 0 0 20px black;
+}
+.contactdetails h1{
+    margin-top: 80px;
+    margin-left: 200px;
+    
+}
+.contactpara1{
+    margin-left: 200px;
+    height: 50px;
+    width: 800px;
+    font-size: 12px;
+    margin-top: 35px;
+}
+.location{
+    margin-left: 200px;
+    font-size: 13px;
+    color: rgb(0, 115, 154);
+}
+.contactmail{
+    margin-left: 200px;
+    margin-top: 35px;
+    font-size: 13px;
+}
+.contactform{
+    margin-top: 40px;
+}
+.entername{
+    height: 30px;
+    width: 800px;
+    margin-left: 200px;
+    margin-bottom: 18px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+.totalpeople{
+    height: 30px;
+    width: 800px;
+    margin-left: 200px;
+    margin-bottom: 18px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+.dateandtime{
+    height: 30px;
+    width: 800px;
+    margin-left: 200px;
+    margin-bottom: 18px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+.messageorreq{
+    height: 30px;
+    width: 800px;
+    margin-left: 200px;
+    margin-bottom: 18px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+.formbtn{
+    margin-left: 200px;
+    height: 25px;
+    width: 90px;
+    font-size: 12px;
+    margin-bottom: 75px;
+}
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffcb8c;
+    height: 80px;
+    font-size: 12px;
+}
+.about:hover{
+    background-color: rgb(234, 176, 176);
+}
+.menu:hover{
+    background-color: rgb(234, 176, 176);
+}
+.contact:hover{
+    background-color: rgb(234, 176, 176);
+}
+@media only screen and (min-width : 320px) and (max-width:1199px){
+    nav ul{
+        display: none;
+    }
+    .nav-bar{
+        display: block;
+        margin-right: 20px;
+    }
+    .herosec{
+        position: relative;
+    }
+    .mainimg {
+        height: 400px;
+    }
+    .aboutsecimg{
+        display: block;
+        text-align: center;
+
+    }
+    .aboutpara h2,.aboutpara h4 ,.aboutparamain,.aboutparamain2 ,.aboutsecimg img{
+        margin-left: 0;
+    }
+    .aboutparamain,.aboutparamain2{
+        text-align: center;
+        width: 100%;
+    }
+    .aboutsecimg img {
+        height: 400px;
+        width: 300px;
+    }
+    .ourmenu{
+        display: block;
+        text-align: center;
+
+    }
+    .ourmenuimg img {
+        height: 450px;
+        width: 330px;
+        margin-left: 0px;
+    }
+    .ourmenupara h1{
+        margin-left: 0;
+        text-align: center;
+    }
+    .BreadBasket{
+        margin-left:0px;
+    }
+    .bread{
+        margin-left:0px;
+    }
+    .honeywithfruits{
+        margin-left:0px;
+    }
+    .honey{
+        margin-left:0px;
+    }
+    .belgianwaffle{
+        margin-left:0px;
+    }
+    .belgian{
+        margin-left:0px;
+    }
+    .Scrambledeggs{
+        margin-left:0px;
+    }
+    .eggs{
+        margin-left:0px;
+    }
+    .BlueberryPancakes{
+        margin-left:0px;
+    }
+    .Blueberry{
+        margin-left:0px;
+    }
+    .divider {
+        height: 1px;
+        width: 100%;
+        background-color: rgb(205, 205, 205);
+        margin-top: 80px;
+    }
+    .contactdetails h1 {
+        margin-top: 80px;
+        /* margin-left: 200px; */
+        margin-left: 35%;
+    }
+    .contactpara1 {
+        margin-left: 0px;
+        height: 50px;
+        width: 100%;
+        font-size: 12px;
+        margin-top: 35px;
+        text-align: center;
+    }
+    .location {
+        margin-left: 0px;
+        font-size: 13px;
+        color: rgb(0, 115, 154);
+        text-align: center;
+    }
+    .contactmail {
+        margin-left: 0px;
+        margin-top: 35px;
+        font-size: 13px;
+        text-align: center;
+    }
+    .totalpeople {
+        height: 30px;
+        width: 60%;
+        margin-left: 5%;
+        margin-bottom: 18px;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+    }
+    .entername {
+        height: 30px;
+        width: 60%;
+        margin-left: 5%;
+        margin-bottom: 18px;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+    }
+    .dateandtime {
+        height: 30px;
+        width: 60%;
+        margin-left: 5%;
+        margin-bottom: 18px;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+    }
+    .messageorreq {
+        height: 30px;
+        width: 60%;
+        margin-left: 5%;
+        margin-bottom: 18px;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+    }
+    .formbtn {
+        margin-left: 5%;
+        height: 25px;
+        width: 90px;
+        font-size: 12px;
+        margin-bottom: 75px;
+    }
+    .contactform {
+        margin-top: 40px;
+        text-align: center;
+    }
+}   
+@media only screen and (min-width : 900px) and (max-width:1199px) {
+    .aboutsecimg{
+        display: flex;
+    }
+    .aboutsecimg img{
+        margin: 5%;
+    }
+    .aboutpara{
+        margin: 3%;
+        font-size: large;
+    }
+    .aboutparamain{
+        font-size: 18px;
+    }
+    .aboutparamain2{
+        margin-top: 60px;
+        font-size: 18px;
+    }
+    .ourmenu{
+        display: flex;
+        justify-content: space-around;
+    }
+    .ourmenupara{
+        font-size: large;
+    }
+    .ourmenupara p{
+        font-size: 18px;
+    }
+}   
+/* @media only screen and (min-width : 900px) and (max-width:1199px){
+    .aboutsecimg{
+        display: flex;
+
+    }
+} */
