@@ -1,0 +1,462 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+.poppins-light {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+h1 {
+    font-size: 50px;
+    line-height: 64px;
+    color: #222;
+}
+
+h2 {
+    font-size: 46px;
+    line-height: 54px;
+    color: #222;
+}
+
+h4 {
+    font-size: 20px;
+    color: #222;
+}
+
+h6 {
+    font-weight: 700;
+    font-size: 12px;
+}
+
+p {
+    font-size: 16px;
+    color: #465b52;
+    margin: 15px 0 20px 0;
+}
+
+.section-p1 {
+    padding: 40px 80px;
+}
+
+.section-m1 {
+    margin: 40px 0;
+}
+
+body {
+    width: 100%;
+    background-color: rgb(240, 222, 254);
+}
+
+/* ----------------header-------------------- */
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 80px;
+    background: hsl(279, 69%, 78%);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+#navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#navbar li {
+    list-style: none;
+    padding: 0px 20px;
+    position: relative;
+}
+
+#navbar li a {
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    color: #711ffe;
+    transition: 0.2s ease;
+}
+
+#navbar li a:hover,
+#navbar li a.active {
+    color: yellow;
+}
+
+#navbar li a.active::after,
+#navbar li a:hover::after {
+    content: "";
+    width: 28%;
+    height: 2px;
+    background: yellow;
+    position: absolute;
+    bottom: -2px;
+    left: 20px;
+}
+
+/*--------------- home -----------------------*/
+#herosec {
+    background-image: url(img/herosec.png);
+    height: 90vh;
+    width: 100%;
+    background-size: cover;
+    background-position: top 10% right 0;
+    padding: 0 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#herosec h4 {
+    padding-bottom: 15px;
+    color: white;
+}
+
+#herosec h2 {
+    color: white;
+}
+
+#herosec h1 {
+    color: #ac69f5;
+}
+
+#herosec p {
+    color: white;
+}
+
+#herosec button {
+    width: 12%;
+    height: 40px;
+    background: #dbb2ff;
+    border: none;
+    outline: none;
+    border-radius: 24px;
+    cursor: pointer;
+    font-size: 15px;
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+}
+
+/* -------------features------------------ */
+#features {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#features .feature-box {
+    width: 225px;
+    text-align: center;
+    padding: 25px 15px;
+    box-shadow: 20px 20px 34px rgba(0, 0, 0, 0.2);
+    border: 1px solid #cce7d0;
+    border-radius: 4px;
+    margin: 15px 0;
+}
+
+#features .feature-box i {
+    color: Mediumslateblue;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+#features .feature-box h5 {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 9px 8px 6px 8px;
+    line-height: 1.3;
+    border-radius: 4px;
+    color: #6b17fc;
+}
+
+#features .feature-box:hover {
+    box-shadow: 10px 10px 54px rgba(70, 62, 221, 0.5);
+}
+
+/* ------------featured products------------- */
+#featured-product {
+    text-align: center;
+}
+
+#featured-product .product-box {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    flex-wrap: wrap;
+}
+
+#featured-product .product-box .product {
+    width: 18%;
+    min-width: 250px;
+    padding: 1.5px 1.5px;
+    border: 2px solid #5906adb5;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.10);
+    margin: 15px 0px;
+    transition: 0.2s ease;
+    position: relative;
+
+}
+
+#featured-product .product:hover {
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.25);
+}
+
+#featured-product .product img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+#featured-product .product .description {
+    text-align: start;
+    padding: 4px 8px;
+
+}
+
+#featured-product .product .description span {
+    color: rgb(68, 68, 68);
+    font-size: 12px;
+    font-weight: 600;
+}
+
+#featured-product .product .description h5 {
+    padding-top: 7px;
+    color: #222;
+    font-size: 14px;
+}
+
+#featured-product .product .description .star i {
+    font-size: 14px;
+    color: rgb(135, 74, 231);
+}
+
+#featured-product .description h4 {
+    padding-top: 7px;
+    font-size: 15px;
+    font-weight: 800;
+    color: #000000;
+}
+
+#featured-product .product-box .product .cart {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50px;
+    background-color: rgb(186, 177, 202);
+    font-weight: 600;
+    color: black;
+    border: 1px solid rgb(171, 121, 247);
+    position: absolute;
+    bottom: 8px;
+    right: 10px;
+    transition: transform .4s ease-in-out;
+}
+
+#featured-product .product-box .product .cart:hover {
+    transform: rotate(360deg);
+}
+
+.summervideo h2 {
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
+    padding: 0px 0px 30px 0px;
+    text-decoration: underline;
+    font-family: Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.video {
+    display: flex;
+    justify-content: center;
+    object-fit: cover;
+    padding: 0px 0px 20px 0px;
+}
+
+#banner {
+    display: flex;
+    justify-content: center;
+    background-image: url(/img/DEADPOOL-WEBSITE-BANNER3.png);
+    width: 100%;
+    height: 72vh;
+    background-size: cover;
+    background-position: center;
+    padding: 0px 0px 0px 0px;
+}
+
+#banner h2 {
+    font-family: Calibri, 'Trebuchet MS', sans-serif;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 420px;
+    color: rgb(255, 255, 0);
+}
+
+#banner h3 {
+    font-family: Calibri, 'Trebuchet MS', sans-serif;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-size: 46px;
+    line-height: 54px;
+    padding-top: 420px;
+    font-weight: 800;
+    color: rgb(237, 0, 0);
+}
+
+#banner2 img {
+    width: 100%;
+    display: block;
+}
+
+#mini-banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#mini-banner img {
+    padding: 18px 8px;
+    height: 450px;
+}
+
+.categories h3 {
+    display: flex;
+    justify-content: center;
+    padding: 25px 0px 0px 0px;
+    font-weight: 600px;
+    font-family: Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#storeinfo .store-img {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#storeinfo .store-img img {
+    border: 1px solid black;
+}
+
+#storeinfo .storetxt {
+    display: flex;
+    justify-content: center;
+    padding: 18px 0px;
+}
+
+#storeinfo .storetxt h2 {
+    border: 2px solid hsl(279, 69%, 78%);
+    padding: 8px 4px;
+}
+
+footer {
+    background-color: rgb(0, 0, 0);
+    background: linear-gradient(to top, black, 95.5%, white);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+footer .colum {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+footer .colum h2 ,
+footer .colum .copyright{
+    color: white;
+}
+
+footer .footer-logo {
+    margin-bottom: 30px;
+}
+
+footer h4 {
+    font-size: 14px;
+    padding-bottom: 20px;
+}
+
+footer p {
+    font-size: 13px;
+    margin: 0px 0px 8px 0px;
+}
+
+footer a {
+    font-size: 13px;
+    text-decoration: none;
+    color: white;
+    margin-bottom: 10px;
+}
+
+footer .social {
+    margin-top: 20px;
+}
+footer .social h3{
+    color: white;
+    text-decoration: underline 2px;
+    padding-bottom: 10px;
+}
+
+footer .social i {
+    color: white;
+    padding-right: 4px;
+    cursor: pointer;
+}
+
+footer .colum h4{
+    color: white;
+    font-size: 15px;
+    font-weight: 700px;
+    text-decoration: underline 3px rgb(196, 229, 7) ;
+}
+
+footer .payment {
+    margin-top: 75px;
+}
+footer .payment p{
+    color: white;
+}
+
+footer .social i:hover,
+footer a:hover {
+    color: yellow;
+}
+/* --------------shop css---------------------- */
+#shophero img{
+    width: 100%;
+    height: 69vh;
+    background-size: cover;
+}
+#pageination{
+    text-align: center;
+}
+#pageination a{
+    text-decoration: none;
+    background-color: hsl(279, 87%, 74%);
+    padding: 15px 20px;
+    border-radius: 4px;
+    color: white;
+    font-weight: 600;
+}
+#pageination a i{
+    font-size: 15px;
+    font-weight: 550;
+}
