@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login Signup Slide</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    * {
+      font-family: sans-serif;
+    }
+    .slide-container {
+      transition: transform 0.5s ease-in-out;
+      width: 200%;
+      display: flex;
+    }
+    .form-section {
+      width: 50%;
+      padding: 2rem;
+    }
+  </style>
+</head>
+<body class="min-h-screen bg-cover bg-center bg-no-repeat flex items-center justify-center font-[Poppins]" style="background-image: url('/photo-1436491865332-7a61a109cc05.avif');">
+
+  <div class="bg-white w-full max-w-md rounded-2xl overflow-hidden shadow-xl">
+    <!-- Tabs -->
+    <div class="flex justify-between bg-gray-200 p-1">
+      <button id="loginTab" class="w-1/2 py-2 font-semibold text-white bg-gradient-to-r from-blue-900 to-blue-500 rounded-xl">Login</button>
+      <button id="signupTab" class="w-1/2 py-2 font-semibold text-black rounded-xl">Signup</button>
+    </div>
+
+    <!-- Slider -->
+    <div class="relative overflow-hidden h-[460px]">
+      <div id="formSlider" class="slide-container">
+
+        <!-- Login -->
+        <form class="form-section space-y-4 bg-white mt-10" id="loginForm">
+          <h2 class="text-xl font-bold text-center">Login Form</h2>
+          <input type="email" name="loginEmail" placeholder="Email Address" class="w-full px-4 py-2 border rounded-xl" required />
+          <input type="password" name="loginPassword" placeholder="Password" class="w-full px-4 py-2 border rounded-xl" required pattern=".{6,}" title="Password must be at least 6 characters" />
+          <div class="text-right text-sm">
+            <a href="#" class="text-blue-600 hover:underline">Forgot password?</a>
+          </div>
+          <button type="submit" class="w-full bg-gradient-to-r from-blue-900 to-blue-500 text-white py-2 rounded-xl font-semibold">Login</button>
+          <p class="text-center text-sm">Don't have an account? <a href="#" id="goSignup" class="text-blue-600 hover:underline">Signup now</a></p>
+        </form>
+
+        <!-- Signup -->
+        <form class="form-section space-y-4 bg-white mt-10" id="signupForm">
+          <h2 class="text-xl font-bold text-center">Signup Form</h2>
+          <input type="email" name="signupEmail" placeholder="Email Address" class="w-full px-4 py-2 border rounded-xl" required pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" title="Enter a valid email" />
+          <input type="password" name="signupPassword" placeholder="Password" class="w-full px-4 py-2 border rounded-xl" required pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{6,}" title="Password must include uppercase, lowercase, and a number, minimum 6 characters" />
+          <input type="password" name="confirmPassword" placeholder="Confirm Password" class="w-full px-4 py-2 border rounded-xl" required />
+          <button type="submit" class="w-full bg-gradient-to-r from-blue-900 to-blue-500 text-white py-2 rounded-xl font-semibold">Signup</button>
+          <p class="text-center text-sm">Already have an account? <a href="#" id="goLogin" class="text-blue-600 hover:underline">Login now</a></p>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const formSlider = document.getElementById('formSlider');
+    const loginTab = document.getElementById('loginTab');
+    const signupTab = document.getElementById('signupTab');
+    const goSignup = document.getElementById('goSignup');
+    const goLogin = document.getElementById('goLogin');
+    const signupForm = document.getElementById('signupForm');
+    const loginForm = document.getElementById('loginForm');
+  
+    loginTab.addEventListener('click', () => {
+      formSlider.style.transform = 'translateX(0%)';
+      loginTab.classList.add('bg-gradient-to-r', 'from-blue-900', 'to-blue-500', 'text-white');
+      signupTab.classList.remove('bg-gradient-to-r', 'from-blue-900', 'to-blue-500', 'text-white');
+      signupTab.classList.add('text-black');
+    });
+  
+    signupTab.addEventListener('click', () => {
+      formSlider.style.transform = 'translateX(-50%)';
+      signupTab.classList.add('bg-gradient-to-r', 'from-blue-900', 'to-blue-500', 'text-white');
+      loginTab.classList.remove('bg-gradient-to-r', 'from-blue-900', 'to-blue-500', 'text-white');
+      loginTab.classList.add('text-black');
+    });
+  
+    goSignup?.addEventListener('click', (e) => {
+      e.preventDefault();
+      signupTab.click();
+    });
+  
+    goLogin?.addEventListener('click', (e) => {
+      e.preventDefault();
+      loginTab.click();
+    });
+  
+    // Signup validation - confirm password
+    signupForm.addEventListener('submit', (e) => {
+      e.preventDefault(); // stop form from submitting normally
+      const password = signupForm.signupPassword.value;
+      const confirm = signupForm.confirmPassword.value;
+  
+      if (password !== confirm) {
+        alert("Passwords do not match.");
+      } else {
+        // You can save the signup data or send it to server here
+        // Simulate success and redirect
+        window.location.href = 'index.html';
+      }
+    });
+  
+    loginForm.addEventListener('submit', (e) => {
+      e.preventDefault(); // stop default behavior
+      const email = loginForm.loginEmail.value;
+      const password = loginForm.loginPassword.value;
+  
+      if (email && password.length >= 6) {
+        // Normally you'd validate credentials against a server
+        // Simulate success and redirect
+        window.location.href = 'index.html';
+      } else {
+        alert("Please enter a valid email and password.");
+      }
+    });
+  </script>
+  
+</body>
+</html>

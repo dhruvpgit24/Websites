@@ -1,0 +1,235 @@
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <title>
+    Payment
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
+</head>
+
+<body class="bg-[#1e293b] text-[#cbd5e1] min-h-screen flex items-center justify-center p-4">
+  <div class="bg-[#15202b] max-w-md w-full rounded-lg p-6 space-y-6 text-sm">
+    <header class="flex items-center justify-between text-white font-semibold text-base">
+      <h1>
+        Payment
+      </h1>
+      <button aria-label="Close" class="text-[#94a3b8] hover:text-white" type="button">
+        <i class="fas fa-times">
+        </i>
+      </button>
+    </header>
+    <form class="space-y-4" id="paymentForm" novalidate>
+      <!-- Mastercard option -->
+      <label class="flex items-center justify-between bg-[#1e293b] rounded-md p-4 cursor-pointer" for="card-mastercard">
+        <div class="flex items-start space-x-3">
+          <input checked="" class="mt-1 text-blue-600 focus:ring-blue-500 border-gray-300 bg-[#1e293b]"
+            id="card-mastercard" name="payment-method" type="radio" />
+          <div class="text-left">
+            <p class="font-semibold text-white leading-tight">
+              Mastercard ending in 8429
+            </p>
+            <p class="text-[#64748b] text-xs leading-tight mt-0.5">
+              Expiry 04/2026
+            </p>
+            <div class="mt-2 text-[#64748b] text-xs space-x-2">
+              <button class="hover:underline" type="button">
+                Delete
+              </button>
+              <span>
+                |
+              </span>
+              <button class="hover:underline" type="button">
+                Edit
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="flex items-center space-x-2">
+          <div
+            class="absolute left-1 top-1 w-4 h-4 rounded-full transition-transform peer-checked:translate-x-5">
+          </div>
+      </label>
+  </div>
+  <img alt="Master-card logo text in gray on dark background" class="h-6 w-auto object-contain" draggable="false" height="24"
+    src="/masterc.png" width="60" />
+  </label>
+  <!-- Paypal option -->
+  <label class="flex items-center justify-between bg-[#1e293b] rounded-md p-4 cursor-pointer" for="card-paypal">
+    <div class="flex items-start space-x-3">
+      <input class="mt-1 text-blue-600 focus:ring-blue-500 border-gray-300 bg-[#1e293b]" id="card-paypal"
+        name="payment-method" type="radio" />
+      <div class="text-left flex flex-col">
+        <p class="font-semibold text-white leading-tight">
+          Paypal account
+        </p>
+        <div class="mt-2 text-[#64748b] text-xs space-x-2">
+          <button class="hover:underline" type="button">
+            Delete
+          </button>
+          <span>
+            |
+          </span>
+          <button class="hover:underline" type="button">
+            Edit
+          </button>
+        </div>
+      </div>
+    </div>
+    <img alt="PayPal logo text in gray on dark background" class="h-6 w-auto object-contain" draggable="false"
+      height="24" src="/payp.png" width="60" />
+  </label>
+  <p class="text-[#94a3b8] text-xs">
+    Use a new payment method
+  </p>
+  <div class="space-y-4">
+    <div>
+      <label class="block font-semibold text-xs mb-1 text-white" for="fullname">
+        Full name (as displayed on card)*
+      </label>
+      <input autocomplete="name"
+        class="w-full bg-[#1e293b] rounded-md py-2 px-3 text-[#94a3b8] text-sm placeholder-[#64748b] focus:outline-none focus:ring-2 focus:ring-blue-600"
+        id="fullname" name="fullname" pattern="^[a-zA-Z\s'-]+$" placeholder="Bonnie Green" required=""
+        title="Please enter a valid name" />
+    </div>
+    <div>
+      <label class="block font-semibold text-xs mb-1 text-white" for="cardnumber">
+        Card number*
+      </label>
+      <input autocomplete="cc-number"
+        class="w-full bg-[#1e293b] rounded-md py-2 px-3 text-[#94a3b8] text-sm placeholder-[#64748b] focus:outline-none focus:ring-2 focus:ring-blue-600"
+        id="cardnumber" inputmode="numeric" maxlength="19" name="cardnumber" pattern="^(\d{4}[- ]?){3}\d{4}$"
+        placeholder="xxxx-xxxx-xxxx-xxxx" required=""
+        title="Please enter a valid card number in format xxxx-xxxx-xxxx-xxxx" />
+    </div>
+    <div class="flex space-x-3">
+      <div class="flex-1">
+        <label class="block font-semibold text-xs mb-1 text-white" for="expiration">
+          Card expiration*
+        </label>
+        <div class="relative">
+          <input aria-describedby="expirationHelp"
+            class="w-full bg-[#1e293b] rounded-md py-2 px-3 pr-10 text-[#94a3b8] text-sm placeholder-[#64748b] focus:outline-none focus:ring-2 focus:ring-blue-600"
+            id="expiration" name="expiration" placeholder="MM/YY" required="" type="date"
+            pattern="^(0[1-9]|1[0-2])\/?([0-9]{2})$" title="Enter expiration date in MM/YY format" />
+          <i aria-hidden="true"
+            class="fas fa-calendar-alt absolute right-3 top-1/2 -translate-y-1/2 text-[#64748b] text-xs">
+          </i>
+        </div>
+        <p class="text-xs text-red-500 mt-1 hidden" id="expirationHelp">
+          Please enter a valid expiration date (MM/YY) that is not in the past.
+        </p>
+      </div>
+      <div class="w-24">
+        <label class="block font-semibold text-xs mb-1 text-white" for="cvv">
+          CVV*
+        </label>
+        <div class="relative">
+          <input autocomplete="cc-csc"
+            class="w-full bg-[#1e293b] rounded-md py-2 px-3 pr-10 text-[#94a3b8] text-sm placeholder-[#64748b] focus:outline-none focus:ring-2 focus:ring-blue-600"
+            id="cvv" inputmode="numeric" maxlength="4" name="cvv" pattern="^\d{3,4}$" placeholder="•••" required=""
+            title="Please enter a valid 3 or 4 digit CVV" type="password" />
+          <div class="absolute right-3 top-1/2 -translate-y-1/2 flex items-center space-x-1 cursor-pointer"
+            role="tooltip" tabindex="0" title="Card Verification Value">
+            <i class="fas fa-info-circle text-[#64748b] text-xs">
+            </i>
+            <img alt="Credit card icon in gray on dark background" class="w-5 h-3 object-contain" draggable="false"
+              height="14" src="https://storage.googleapis.com/a1aa/image/95e22b50-97bd-440d-78d9-d5ef99a9cf37.jpg"
+              width="20" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="flex space-x-3 pt-4">
+    <button
+      class="bg-blue-600 text-white rounded-md px-4 py-2 text-sm font-semibold hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 flex-1"
+      type="submit">
+      Pay now
+    </button>
+    <button
+      class="bg-[#1e293b] text-[#64748b] rounded-md px-4 py-2 text-sm font-semibold hover:text-white hover:bg-[#273549] focus:outline-none focus:ring-2 focus:ring-blue-500"
+      type="button">
+      Close
+    </button>
+  </div>
+  </form>
+  </div>
+  <script>
+    // Set min expiration date to current month/year in MM/YY format
+    function isValidExpiration(value) {
+      if (!value) return false;
+      const match = value.match(/^(0[1-9]|1[0-2])\/?([0-9]{2})$/);
+      if (!match) return false;
+      const month = parseInt(match[1], 10);
+      const year = parseInt(match[2], 10);
+      const now = new Date();
+      const currentYear = now.getFullYear() % 100; // last two digits
+      const currentMonth = now.getMonth() + 1; // 1-based
+      if (year < currentYear) return false;
+      if (year === currentYear && month < currentMonth) return false;
+      return true;
+    }
+
+    document.getElementById('paymentForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const form = e.target;
+      const fullname = form.fullname;
+      const cardnumber = form.cardnumber;
+      const expiration = form.expiration;
+      const cvv = form.cvv;
+      let valid = true;
+
+      // Validate fullname (only letters, spaces, apostrophes, hyphens)
+      if (!fullname.checkValidity()) {
+        valid = false;
+        fullname.focus();
+        alert(fullname.title);
+        return;
+      }
+
+      // Validate card number (format xxxx-xxxx-xxxx-xxxx)
+      if (!cardnumber.checkValidity()) {
+        valid = false;
+        cardnumber.focus();
+        alert(cardnumber.title);
+        return;
+      }
+
+      // Validate expiration date format and not in past
+      const expirationHelp = document.getElementById('expirationHelp');
+      if (!isValidExpiration(expiration.value)) {
+        valid = false;
+        expirationHelp.classList.remove('hidden');
+        expiration.focus();
+        return;
+      } else {
+        expirationHelp.classList.add('hidden');
+      }
+
+      // Validate CVV (3 or 4 digits)
+      if (!cvv.checkValidity()) {
+        valid = false;
+        cvv.focus();
+        alert(cvv.title);
+        return;
+      }
+
+      if (valid) {
+        alert('Payment submitted successfully!');
+        form.reset();
+      }
+    });
+  </script>
+</body>
+
+</html>
