@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>api</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+ @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+
+        img{
+           height: 90%;
+           width: 95%;
+           margin-top: 2.5%;
+           margin-left: 2.5%;
+           border-radius: 10px;
+        }
+        .img{
+            width: 70%;
+            height: 400px;
+            background-color: #c7e8ff;
+            margin-left: 15%;
+            border-radius: 10px;
+            margin-top: 1.5%;
+        }
+        body{
+            background-color: #E3f2fd;
+        }
+        .heading{
+            width: 70%;
+            margin-left: 15%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            gap: 4%;
+            margin-top: 2%;
+      
+            padding-top: 1%;
+            padding-bottom: 1%;
+            border-radius: 10px;
+        }
+        .divi1{
+            height: 1px;
+            width: 300px;
+            background-color: #4aaef6;
+            margin-top: 3%;
+        }
+        .divi2{
+            height: 1px;
+            width: 95%;
+            background-color: #4aaef6;
+            margin-top: 1.5%;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "DM Sans", sans-serif;
+        }
+        .overv{
+            width: 70%;
+            margin-left: 15%;
+            background-color:#c7e8ff;
+            padding-left: 2%;
+            margin-top: 2%;
+            border-radius: 10px;
+            padding-top: 1%;
+            padding-bottom: 1%;
+            display: flex;
+            flex-direction: column;
+           height: auto;
+           gap: 2%;
+        }
+        .button{
+            height: 55px;
+            width: 100%;
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-end;
+
+        }
+        .Dur-h3{
+            font-weight:900;
+        }
+         button{
+            margin-right: 5%;
+            padding: 10px;
+            width: 120px;
+            border: 1px solid #4aaef6;
+            background-color: #4aaef6;
+            color: white;
+            border-radius: 10px;
+        }
+    
+        .duration{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            height: 60px;
+            margin-top: 1%;
+        }
+        .tips{
+            width: 70%;
+            margin-left: 15%;
+            background-color:#c7e8ff;
+            padding-left: 3%;
+            margin-top: 2%;
+            border-radius: 10px;
+            padding-top: 2%;
+            padding-bottom: 3%;
+            display: flex;
+            flex-direction: column;
+           height: auto;
+           gap: 2%;
+        }
+        .tips h4{
+            margin-top: 5px;
+        }
+        .tips li{
+            margin-left: 2%;
+            margin-top: 10px;
+            width: 95%;
+        }
+        .tips h1{
+            margin-top: 10px;
+        }
+        .divi3{
+            height: 1px;
+            width: 300px;
+            background-color: #4aaef6;
+            margin-top: 1%;
+           
+        }
+        .faq{
+            width: 70%;
+            margin-left: 15%;
+            background-color:#c7e8ff;
+            padding-left: 3%;
+            margin-top: 2%;
+            border-radius: 10px;
+            padding-top: 2%;
+            padding-bottom: 1%;
+            display: flex;
+            flex-direction: column;
+           height: auto;
+           gap: 2%;
+        }
+        .faq h4{
+            margin-top: 10px;
+        }
+        .faq h2{
+            margin-top: 10px;
+        }
+        .faq li{
+            margin-top: 5px;
+            width: 95%;
+        }
+        .divi3{
+            height: 1px;
+            width: 95%;
+            background-color: #4aaef6;
+            margin-top: 2.5%;
+        }
+        .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    backdrop-filter: blur(40px);
+    position: sticky;
+    top: 0;
+    z-index: 5;
+}
+#id{
+    display: none;
+}
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    position: relative;
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    padding: 0 10px;
+}
+
+.nav-links a:after {
+    content: "";
+    position: absolute;
+    background-color: #578FCA;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -10px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover:after {
+    width: 100%;
+}
+
+.book-trip {
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/*------------------------------------------- profile ------------------------*/
+.book-trip:hover {
+    background-color: #2887ff;
+}
+/* Profile Dropdown */
+.book-trip {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 15px;
+    background: black;
+    color: white;
+    border-radius: 25px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Arrow rotation effect */
+.dropdown-arrow {
+    transition: transform 0.3s ease;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 80%;
+    right: 2.5%;
+    background: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    width: 150px;
+    z-index: 100;
+}
+
+.dropdown-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.dropdown-menu ul li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.dropdown-menu ul li a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+}
+
+.dropdown-menu ul li:hover {
+    background: #007bff;
+    color: white;
+}
+
+/* Hover or Click Effect */
+.navbar .book-trip:hover + .dropdown-menu,
+.navbar .dropdown-menu:hover {
+    display: block;
+}
+
+.navbar .book-trip:hover .dropdown-arrow,
+.navbar .dropdown-menu:hover ~ .book-trip .dropdown-arrow {
+    transform: rotate(90deg);
+}
+
+
+
+    </style>
+</head>
+<body>
+    
+    <nav class="navbar">
+        <div class="logo">Skywings</div>
+        <ul class="nav-links">
+            <li><a href="home.html">HOME</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="trip.html">DESTINATIONS</a></li>
+            <li><a href="package.html">PACKAGE & TOUR</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+        <a href="#" class="book-trip">
+            Profile <i class="fa-solid fa-user"></i> 
+            <i class="fa-solid fa-chevron-right dropdown-arrow"></i>
+        </a>
+        <div class="dropdown-menu">
+            <ul>
+                <li><a href="profile.html">My Account</a></li>
+                <li><a href="booking.html">Bookings</a></li>
+                <li><a href="#">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+    <header>
+    <div class="col" id="main">
+    
+    </div>
+   
+    </div>
+<script src="package.js"></script>
+</body>
+</html>

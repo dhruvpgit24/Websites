@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Panel</title>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+    @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css");
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "DM Sans", sans-serif;
+   }
+  
+  body {
+    display: flex;
+    min-height: 100vh;
+    background-color: #E3F2FD;
+  }
+  
+  /* Sidebar */
+  .sidebar {
+    width: 220px;
+    background-color: #00919f;
+    color: white;
+    padding: 20px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+  
+  .admin-title {
+    font-size: 22px;
+    text-align: center;
+  }
+  
+  .sidebar button {
+    padding: 12px;
+    margin-bottom: 12px;
+    width: 100%;
+    border: none;
+    background-color: #3d5d75;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background 0.3s;
+  }
+  
+  .sidebar button:hover {
+    background-color: #BBDEFB;
+    color: black;
+  }
+  
+  .date-time {
+    margin-top: 20px;
+    font-size: 14px;
+    text-align: center;
+  }
+  
+  /* Main Container */
+  .container {
+    flex: 1;
+    padding: 30px;
+    overflow-y: auto;
+  }
+  
+  /* Content Header */
+  .header {
+    font-size: 28px;
+    margin-bottom: 25px;
+    color: #2c3e50;
+    text-align: center;
+  }
+
+  #addPackageSection{
+    margin-top: 5%;
+  }
+  
+  /* Form Styles */
+  .form-addpkg {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+    margin: auto;
+  }
+  
+  .input-field {
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+  }
+  
+  .action-button {
+    padding: 12px;
+    background-color: #49adff;
+    border: none;
+    color: black;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .action-button:hover {
+    background-color: #3d5d75;
+    color: white;
+  }
+  
+  /* Cards */
+  .cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 280px;
+    padding: 15px;
+    transition: transform 0.2s;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    font-size: 17px;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .card-body p {
+    font-size: 14px;
+    color: #555;
+    margin: 6px 0;
+  }
+  
+  .package-image {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 10px;
+  }
+  
+  
+  .delete-btn,
+  .delete-package-btn {
+    background: none;
+    border: none;
+    color: #e74c3c;
+    font-size: 16px;
+    cursor: pointer;
+    transition: color 0.2s;
+  }
+  
+  .delete-btn:hover,
+  .delete-package-btn:hover {
+    color: #c0392b;
+  }
+  
+  /* Hidden section */
+  .hidden {
+    display: none;
+  }
+  
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+  
+  </style>
+</head>
+<body>
+  <div class="sidebar">
+    <h4 class="admin-title">Admin Panel</h4>
+    <div class="date-time">
+      <div id="date"></div>
+      <div id="time"></div>
+    </div>
+    <button onclick="showSection('addPackageSection')">Add Package</button>
+    <button onclick="showSection('managePackagesSection')">Delete Packages</button>
+    <button onclick="showSection('bookingsSection')">Manage Bookings</button>
+    <button onclick="logout()">LogOut</button>
+  </div>
+
+  <div class="container">
+    <!-- Add Package Section -->
+    <div id="addPackageSection" class="content-section">
+      <h1 class="header">Add Package</h1>
+      <form class="form-addpkg">
+        <input type="text" class="input-field" placeholder="Package Name" required>
+        <input type="number" class="input-field" placeholder="Package Price ($)" required>
+        <input type="number" class="input-field" placeholder="Package Duration (Days)" required>
+        <textarea class="input-field" placeholder="Package Description" required></textarea>
+        <input type="file" class="input-field" required>
+        <button type="submit" class="action-button">Add Package</button>
+      </form>
+    </div>
+
+    <!-- Manage Packages Section -->
+    <div id="managePackagesSection" class="content-section hidden">
+      <h1 class="header">Manage Packages</h1>
+      <div class="cards-container">
+        <div class="card">
+          <div class="card-header">
+            Paris Getaway
+            <button class="delete-package-btn"><i class="fas fa-trash"></i></button>
+          </div>
+          <div class="card-body">
+            <img src="images/paris.jpg" class="package-image">
+            <p>A beautiful 3-day trip to Paris.</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            Paris Getaway
+            <button class="delete-package-btn"><i class="fas fa-trash"></i></button>
+          </div>
+          <div class="card-body">
+            <img src="images/paris.jpg" class="package-image">
+            <p>A beautiful 3-day trip to Paris.</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            Paris Getaway
+            <button class="delete-package-btn"><i class="fas fa-trash"></i></button>
+          </div>
+          <div class="card-body">
+            <img src="images/paris.jpg" class="package-image">
+            <p>A beautiful 3-day trip to Paris.</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            Paris Getaway
+            <button class="delete-package-btn"><i class="fas fa-trash"></i></button>
+          </div>
+          <div class="card-body">
+            <img src="images/paris.jpg" class="package-image">
+            <p>A beautiful 3-day trip to Paris.</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            Paris Getaway
+            <button class="delete-package-btn"><i class="fas fa-trash"></i></button>
+          </div>
+          <div class="card-body">
+            <img src="images/paris.jpg" class="package-image">
+            <p>A beautiful 3-day trip to Paris.</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            Paris Getaway
+            <button class="delete-package-btn"><i class="fas fa-trash"></i></button>
+          </div>
+          <div class="card-body">
+            <img src="images/paris.jpg" class="package-image">
+            <p>A beautiful 3-day trip to Paris.</p>
+          </div>
+        </div>
+
+
+
+      </div>
+    </div>
+
+    <!-- Bookings Section -->
+    <div id="bookingsSection" class="content-section hidden">
+      <h1 class="header">Manage Bookings</h1>
+      <div class="cards-container">
+        <div class="card">
+          <div class="card-header">
+            John Doe
+            <button class="delete-btn"><i class="fas fa-trash"></i></button>
+          </div>
+          <div class="card-body">
+            <p>Email: john@example.com</p>
+            <p>Phone: 1234567890</p>
+            <p>Location: Paris</p>
+            <p>Guests: 2</p>
+            <p>Arrival: 2025-05-01</p>
+            <p>Leaving: 2025-05-05</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            John Doe
+            <button class="delete-btn"><i class="fas fa-trash"></i></button>
+          </div>
+          <div class="card-body">
+            <p>Email: john@example.com</p>
+            <p>Phone: 1234567890</p>
+            <p>Location: Paris</p>
+            <p>Guests: 2</p>
+            <p>Arrival: 2025-05-01</p>
+            <p>Leaving: 2025-05-05</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            John Doe
+            <button class="delete-btn"><i class="fas fa-trash"></i></button>
+          </div>
+          <div class="card-body">
+            <p>Email: john@example.com</p>
+            <p>Phone: 1234567890</p>
+            <p>Location: Paris</p>
+            <p>Guests: 2</p>
+            <p>Arrival: 2025-05-01</p>
+            <p>Leaving: 2025-05-05</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            John Doe
+            <button class="delete-btn"><i class="fas fa-trash"></i></button>
+          </div>
+          <div class="card-body">
+            <p>Email: john@example.com</p>
+            <p>Phone: 1234567890</p>
+            <p>Location: Paris</p>
+            <p>Guests: 2</p>
+            <p>Arrival: 2025-05-01</p>
+            <p>Leaving: 2025-05-05</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            John Doe
+            <button class="delete-btn"><i class="fas fa-trash"></i></button>
+          </div>
+          <div class="card-body">
+            <p>Email: john@example.com</p>
+            <p>Phone: 1234567890</p>
+            <p>Location: Paris</p>
+            <p>Guests: 2</p>
+            <p>Arrival: 2025-05-01</p>
+            <p>Leaving: 2025-05-05</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            John Doe
+            <button class="delete-btn"><i class="fas fa-trash"></i></button>
+          </div>
+          <div class="card-body">
+            <p>Email: john@example.com</p>
+            <p>Phone: 1234567890</p>
+            <p>Location: Paris</p>
+            <p>Guests: 2</p>
+            <p>Arrival: 2025-05-01</p>
+            <p>Leaving: 2025-05-05</p>
+          </div>
+        </div>
+        
+
+
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function showSection(id) {
+      const sections = document.querySelectorAll('.content-section');
+      sections.forEach(section => section.classList.add('hidden'));
+      document.getElementById(id).classList.remove('hidden');
+    }
+
+    function logout() {
+      alert("Logging out...");
+      window.location.href = "admin.html";
+    }
+
+    function updateClock() {
+      const now = new Date();
+      document.getElementById('date').textContent = now.toDateString();
+      document.getElementById('time').textContent = now.toLocaleTimeString();
+    }
+    setInterval(updateClock, 1000);
+    updateClock();
+  </script>
+</body>
+</html>

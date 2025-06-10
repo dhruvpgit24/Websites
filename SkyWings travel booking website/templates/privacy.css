@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "DM Sans", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f1f8ff;
+  color: #333;
+}
+
+.privacy-header {
+  background-color: #6cc2ff;
+  color: white;
+  text-align: center;
+  padding: 4rem 1rem;
+}
+
+.privacy-title {
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+.privacy-subtitle {
+  font-size: 1.1rem;
+  font-weight: 300;
+  margin-top: 0.5rem;
+}
+
+.privacy-container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.privacy-section {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  margin-bottom: 2rem;
+}
+
+.privacy-heading {
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: #0068b2;
+}
+
+.privacy-text {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.privacy-text a {
+  text-decoration: underline;
+  color: #004475;
+}
+
+@media (max-width: 600px) {
+  .privacy-title {
+    font-size: 2rem;
+  }
+
+  .privacy-heading {
+    font-size: 1.3rem;
+  }
+
+  .privacy-container {
+    padding: 0 0.5rem;
+  }
+}

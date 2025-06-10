@@ -1,0 +1,368 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "DM Sans", sans-serif;
+        }
+        body{
+            background-color: aliceblue;
+        }
+         .img{
+            height: 400px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-image: url("img6.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+         }
+        .img h1{
+         
+            font-family: monospace;
+            font-size: 40px;
+          
+           padding: 20px;
+           text-align: center;
+           border-radius: 20px;
+           border: 5px solid black;
+           mix-blend-mode: overlay;
+           -webkit-text-stroke: 3px black;
+         }
+         .section{
+            height: 150vw;
+            width: 100%;
+            background: linear-gradient(aliceblue, white);
+            margin-top: 3%
+         }
+         .select{
+            padding-top: 3%
+             
+         }
+         .select1{
+            width: 260px;
+            height: 50px;
+            background-color: aliceblue;
+            border-left: none;
+            border-right: none;
+            border-top: none;
+            margin-left: 4%;
+         }
+         .select label{
+            font-size: 23px;
+            font-family:cursive;
+            margin-left: 4%;
+         }
+         .trending-tours {
+    max-width: 1200px;
+    margin: auto;
+    cursor: pointer;
+    margin-top: 5%;
+   
+}
+
+.trending-tours h2 {
+    text-align: center;
+    margin-bottom: 3%;
+
+}
+
+
+.tour-card:hover {
+    transform: scale(1.05, 1.05);
+}
+
+.highlight {
+    color: blue;
+}
+
+.tour-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 3%;
+   animation-name: example;
+   animation-duration: 1.5s;
+  
+}
+@keyframes example{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+
+.tour-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 33%;
+    position: relative;
+    transition: 0.3s;
+}
+
+.tour-card img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+}
+
+.tour-info {
+    padding: 15px;
+}
+
+.tour-info h3 {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.tour-info p {
+    margin: 5px 0;
+    color: gray;
+}
+
+.rating i {
+    color: rgb(224, 224, 0);
+}
+
+.price {
+    font-weight: bold;
+    color: #333;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: red;
+    margin-right: 5px;
+}
+
+.discount-tag {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: red;
+    color: white;
+    padding: 5px 10px;
+    font-size: 14px;
+    border-radius: 5px;
+}
+.place-img{
+   height: 300px;
+   width: 100%;
+   background-image: url('packageimg/wallpapersden.com_city-australia-sydney_1920x1080.jpg');
+   background-size: cover;
+   background-repeat: no-repeat;
+   margin-bottom: 3%;
+   background-position: 0 35%;
+   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   border-radius: 20px;
+   margin-top: 4%;
+   animation-name: example;
+   animation-duration: 1.5s;}
+   
+.place-img2{
+   height: 300px;
+   width: 100%;
+   background-image: url('packageimg/wallpapersden.com_city-australia-sydney_1920x1080.jpg');
+   background-size: cover;
+   background-repeat: no-repeat;
+   margin-bottom: 3%;
+   background-position: 0 35%;
+   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   border-radius: 20px;
+   margin-top: 4%;
+   
+}
+.place-img3{
+   height: 300px;
+   width: 100%;
+   background-image: url('packageimg/wallpapersden.com_city-australia-sydney_1920x1080.jpg');
+   background-size: cover;
+   background-repeat: no-repeat;
+   margin-bottom: 3%;
+   background-position: 0 35%;
+   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   border-radius: 20px;
+   margin-top: 4%;
+}
+.place-h1{
+   color: white;
+  word-spacing: 5px;
+  letter-spacing: 5px;
+  mix-blend-mode: overlay;
+  -webkit-text-stroke: 1px black;
+  font-size: 45px;
+}
+.Best{
+   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   font-size: 40px;
+   letter-spacing: 2px;
+   word-spacing: 4px;
+}
+.packages{
+   height: auto;
+   width: 100%;
+ 
+}
+.tour-card img{
+   opacity: 0.9;
+}
+.tour-card button{
+    padding: 5px;
+    background-color: red;
+    color: white;
+    border: 1px solid white;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    backdrop-filter: blur(40px);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 5;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    position: relative;
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    padding: 0 10px;
+}
+
+.nav-links a:after {
+    content: "";
+    position: absolute;
+    background-color: #578FCA;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -10px;
+    transition: 0.3s;
+}
+.nav-links a.active:after {
+    width: 100%;
+}
+.nav-links a.active {
+    background: transparent;
+    color: black; /* or your default link color */
+}
+
+.nav-links a:hover:after {
+    width: 100%;
+}
+
+.book-trip {
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/*------------------------------------------- profile ------------------------*/
+.book-trip:hover {
+    background-color: #2887ff;
+}
+/* Profile Dropdown */
+.book-trip {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 15px;
+    background: black;
+    color: white;
+    border-radius: 25px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Arrow rotation effect */
+.dropdown-arrow {
+    transition: transform 0.3s ease;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 80%;
+    right: 2.5%;
+    background: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    width: 150px;
+    z-index: 100;
+}
+
+.dropdown-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.dropdown-menu ul li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.dropdown-menu ul li a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+}
+
+.dropdown-menu ul li:hover {
+    background: #007bff;
+    color: white;
+}
+
+/* Hover or Click Effect */
+.navbar .book-trip:hover + .dropdown-menu,
+.navbar .dropdown-menu:hover {
+    display: block;
+}
+
+.navbar .book-trip:hover .dropdown-arrow,
+.navbar .dropdown-menu:hover ~ .book-trip .dropdown-arrow {
+    transform: rotate(90deg);
+}

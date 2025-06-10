@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="profile.css">
+</head>
+
+<body>
+    <div class="main">
+        <div class="bgimg">
+            <img src="/package&tourimg/fa1cd2e0-1c40-4d8e-adc9-142d0f353d55-removebg-preview.png" alt="">
+        </div>
+        <!-- --------------------nav--------------------------------------------- -->
+        <nav class="navbar">
+            <div class="logo">Skywings</div>
+            <ul class="nav-links">
+                <li><a href="/home">HOME</a></li>
+                <li><a href="/about">ABOUT</a></li>
+                <li><a href="/trip">CUSTOMIZE-TRIPS</a></li>
+                <li><a href="/package">PACKAGE & TOUR</a></li>
+                <li><a href="/contact">CONTACT</a></li>
+            </ul>
+            <a href="#" class="book-trip">
+                Profile <i class="fa-solid fa-user"></i>
+                <i class="fa-solid fa-chevron-right dropdown-arrow"></i>
+            </a>
+            <div class="dropdown-menu">
+                <ul>
+                    <li><a href="profile.html">My Account</a></li>
+                    <li><a href="booking.html">Bookings</a></li>
+                    <li><a href="">Logout</a></li>
+                </ul>
+            </div>
+
+        </nav>
+        <!-- -------------------------------profilecard----------------------------- -->
+        <div class="profiletxt">
+            <h3>My Profile</h3>
+        </div>
+        <div class="cont">
+            <div class="card1">
+                <div class="profileinfo1">
+                    <div class="profileimg">
+                        <img id="profileImg" src="/img/review6.jpeg" alt="Profile Image">
+                    </div>
+                    <div class="addimgbtn">
+                        <button id="addPhotoBtn">
+                            Add Profile Photo
+                        </button>
+                        <input type="file" id="fileInput" accept="image/*" style="display: none;">
+                    </div>
+                </div>
+                <div class="profileinfo">
+                    <div class="info1">
+                        <div class="pfpnamemain">
+                            <p class="pfpname">
+                                Dhruv Patel
+                            </p>
+                        </div>
+                        <p class="pfpmnum">7600712613</p>
+                        <p class="pfpemail">dhruvpatel@gmail.com</p>
+                    </div>
+                    <div class="info2">
+                        <div class="pfbar">
+
+                        </div>
+                        <div class="pfbarper">
+                            <p class="pfbarperp">
+                                Your Profile Is <b>0%</b> Complete
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ------------------------------form------------------------------------ -->
+        <div class="cont2" style="min-height: 321px;">
+            <div class="pf-form-container">
+                <div class="pf-form-title">Personal Information</div>
+                <form id="registrationForm" action="#">
+                    <div class="pf-form-gender-details">
+                        <p class="pf-form-gender-title">Gender</p>
+                        <div class="pf-form-category">
+                            <label><input type="radio" name="gender" value="Male" required> Male</label>
+                            <label><input type="radio" name="gender" value="Female" required> Female</label>
+                            <label><input type="radio" name="gender" value="Other" required> Other</label>
+                        </div>
+                    </div>
+                    <div class="pf-form-user-details">
+                        <div class="pf-form-input-box">
+                            <p class="pf-form-details">Full Name</p>
+                            <input type="text" id="fullName" placeholder="E.g: John Smith" required
+                                pattern="^[A-Za-z]+( [A-Za-z]+)+$"
+                                title="Full name must contain at least two words with only letters.">
+                        </div>
+                        <div class="pf-form-input-box">
+                            <span class="pf-form-details">Username</span>
+                            <input type="text" id="username" placeholder="johnWC98" required
+                                pattern="^[a-zA-Z0-9_]{5,15}$"
+                                title="Username should be 5-15 characters long and contain only letters, numbers, and underscores.">
+                        </div>
+                        <div class="pf-form-input-box">
+                            <span class="pf-form-details">Email</span>
+                            <input type="email" id="email" placeholder="johnsmith@hotmail.com" required
+                                pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+                                title="Enter a valid email address.">
+                        </div>
+                        <div class="pf-form-input-box">
+                            <span class="pf-form-details">Phone Number</span>
+                            <input type="tel" id="phone" pattern="^[0-9]{3}-[0-9]{3}-[0-9]{4}$"
+                                placeholder="012-345-6789" required
+                                title="Phone number must be in the format 012-345-6789.">
+                        </div>
+                        <div class="pf-form-input-box">
+                            <p class="pf-form-details">Date of Birth</p>
+                            <input type="date" id="dob" required>
+                        </div>
+                        <div class="pf-form-input-box">
+                            <p class="pf-form-details">City</p>
+                            <select id="city" required>
+                                <option value="">Select City</option>
+                                <option value="Mumbai">Mumbai</option>
+                                <option value="Delhi">Delhi</option>
+                                <option value="Bangalore">Bangalore</option>
+                                <option value="Hyderabad">Hyderabad</option>
+                                <option value="Ahmedabad">Ahmedabad</option>
+                                <option value="Chennai">Chennai</option>
+                                <option value="Kolkata">Kolkata</option>
+                                <option value="Pune">Pune</option>
+                                <option value="Jaipur">Jaipur</option>
+                                <option value="Lucknow">Lucknow</option>
+                                <option value="Surat">Surat</option>
+                                <option value="Chandigarh">Chandigarh</option>
+                                <option value="Coimbatore">Coimbatore</option>
+                                <option value="Indore">Indore</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="pf-form-button">
+                        <input type="submit" value="Register">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- -----------------------visa-------------------------------------- -->
+        <div class="cont3">
+            <div class="visa-container">
+                <div class="visa-header" onclick="toggleVisaDetails()">
+                    <p>Visa Details</p>
+                    <p class="arrow"><b>></b></p>
+                </div>
+
+                <div class="visa-form">
+                    <div class="form-group">
+                        <label>Visa Number <span style="color: red;">*</span></label>
+                        <input type="text" id="visaNumber" placeholder="Enter Visa Number">
+                        <p class="error" id="visaError">Please enter a valid Visa Number (digits only).</p>
+                    </div>
+                    <div class="form-group">
+                        <label>Visa Expiry Date <span style="color: red;">*</span></label>
+                        <input type="date">
+                    </div>
+                    <div class="form-group">
+                        <label>Upload Visa Copy</label>
+                        <input type="file" id="visaFile" accept="image/png, image/jpeg, image/jpg, image/gif">
+                        <p class="error" id="fileError">Only JPG, JPEG, PNG, or GIF files are allowed.</p>
+                    </div>
+                    <button class="update-btn" onclick="validateForm()">Update</button>
+                </div>
+            </div>
+        </div>
+        <!-- ------------------------------co-traveller---------------------------------- -->
+        <div class="cont4">
+            <div class="cotraveler-container">
+                <div class="cotraveler-header" onclick="toggleForm()">
+                    Co-Traveller Details
+                    <span class="cotraveler-arrow" id="cotraveler-arrow">></span>
+                </div>
+
+                <div class="cotraveler-form-container" id="cotraveler-form">
+                    <div class="cotraveler-form-group">
+                        <label class="cotraveler-label">Name</label>
+                        <input type="text" class="cotraveler-input" required>
+                        <div class="cotraveler-error" id="cotraveler-name-error"></div>
+                    </div>
+
+                    <!-- <div class="cotraveler-form-group">
+                        <label class="cotraveler-label">Gender</label>
+                        <select class="cotraveler-input">
+                            <option>Male</option>
+                            <option>Female</option>
+                            <option>Other</option>
+                        </select>
+                    </div> -->
+                    <div class="cotraveler-form-group">
+                        <p class="cotraveler-label">Gender</p>
+                        <div class="cotraveler-input">
+                            <label><input type="radio" name="gender" value="Male" required> Male</label>
+                            <label><input type="radio" name="gender" value="Female" required> Female</label>
+                            <label><input type="radio" name="gender" value="Other" required> Other</label>
+                        </div>
+                    </div>
+
+                    <div class="cotraveler-form-group">
+                        <label class="cotraveler-label">Birth Date</label>
+                        <input type="date" class="cotraveler-input" required>
+                        <div class="cotraveler-error" id="cotraveler-dob-error"></div>
+                    </div>
+
+                    <div class="cotraveler-form-group">
+                        <label class="cotraveler-label">Email</label>
+                        <input type="email" class="cotraveler-input" required>
+                    </div>
+
+                    <div class="cotraveler-form-group">
+                        <label class="cotraveler-label">Phone Number</label>
+                        <input type="tel" class="cotraveler-input" required>
+                        <div class="cotraveler-error" id="cotraveler-phone-error"></div>
+                    </div>
+
+                    <button class="cotraveler-button">Submit</button>
+                </div>
+            </div>
+        </div>
+        <!-- ------------------------------------footer----------------------- -->
+        <footer>
+            <div class="footer-container">
+                <div class="footer-section">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="helpcenter.html">Help Center</a></li>
+                       
+                        <li><a href="safety_opt.html">Safety information</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="/about">About us</a></li>
+                        <li><a href="travelguidline.html">Travel Guidlines</a></li>
+                        <li><a href="privacy.html">Privacy policy</a></li>
+                        <li><a href="termsofservice.html">Terms of service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <ul>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="contact">Get in touch</a></li>
+                    </ul>
+                </div>
+                <div class="wrapper">
+                    <!-- <div class="icon facebook">
+                        <div class="tooltip">
+                            Facebook
+                        </div>
+                        <span><i class="fab fa-facebook-f"></i></span>
+                    </div> -->
+                    <div class="icon twitter">
+                        <div class="tooltip">
+                            Twitter
+                        </div>
+                        <span><i class="fab fa-twitter"></i></span>
+                    </div>
+                    <div class="icon instagram">
+                        <div class="tooltip">
+                            Instagram
+                        </div>
+                        <span><i class="fab fa-instagram"></i></span>
+                    </div>
+                    <div class="icon github">
+                        <div class="tooltip">
+                            Github
+                        </div>
+                        <span><i class="fab fa-github"></i></span>
+                    </div>
+                    <div class="icon youtube">
+                        <div class="tooltip">
+                            YouTube
+                        </div>
+                        <span><i class="fab fa-youtube"></i></span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; Skywings</p>
+                <div class="payment-icons">
+                    <img src="/img/paycard1.png" alt="Visa">
+                    <img src="/img/paycard2.svg" alt="Mastercard">
+                    <img src="/img/paycard3.jpeg" alt="Discover">
+                    <img src="/img/paycard4.png" alt="PayPal">
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+<script src="profile.js"></script>
+
+</html>

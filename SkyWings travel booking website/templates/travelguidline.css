@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "DM Sans", sans-serif;
+}
+
+body {
+  background-color: #E3F2FD;
+  color: #333;
+}
+
+.guidelines-header {
+  background-color: #6cc2ff;
+  color: white;
+  text-align: center;
+  padding: 4rem 1rem;
+}
+
+.guidelines-header h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+.guidelines-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.guidelines-box {
+  background-color: #f9fcff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.guidelines-box h2 {
+  color: #0068b2;
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.guidelines-box p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+@media (max-width: 600px) {
+  .guidelines-header h1 {
+    font-size: 1.8rem;
+  }
+}

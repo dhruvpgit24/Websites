@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "DM Sans", sans-serif;
+}
+
+body {
+  background-color: #e3f2fd;
+  color: #333;
+}
+
+.safety-header {
+  background-color: #6cc2ff;
+  color: white;
+  text-align: center;
+  padding: 4rem 1rem;
+}
+
+.safety-title {
+  font-size: 2.5rem;
+}
+
+.safety-subtitle {
+  font-size: 1.1rem;
+  font-weight: 300;
+  margin-top: 0.5rem;
+}
+
+.safety-container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.safety-section {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  margin-bottom: 2rem;
+}
+
+.safety-heading {
+  font-size: 1.5rem;
+  color: #0068b2;
+  margin-bottom: 0.75rem;
+}
+
+.safety-text {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.safety-text a {
+  color: #00497d;
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  .safety-title {
+    font-size: 2rem;
+  }
+
+  .safety-heading {
+    font-size: 1.3rem;
+  }
+
+  .safety-container {
+    padding: 0 0.5rem;
+  }
+}

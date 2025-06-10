@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skywings</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <style>
+    @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+
+    *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: "DM Sans", sans-serif;
+        }
+        .form{
+            width:80% ;
+            height: 280px;
+            margin-left: 10%;
+            border: 1px solid green;
+            margin-top: 3%;
+        }
+        .heading{
+            width: 100%;
+            height: 350px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url('img5.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: 0 25%;
+            
+        }
+        .heading h1{
+            font-size: 50px;
+            mix-blend-mode: overlay;
+           -webkit-text-stroke: 3px black;
+           letter-spacing: 10px;
+        font-family: 'Courier New', Courier, monospace;
+           padding: 8px;
+           border-radius: 10px;
+          backdrop-filter: blur(20px);
+          border: 2px solid black;
+        }
+        .col{
+         display: flex;
+         margin-top: 2%;
+        justify-content: center;
+        align-items:flex-start;
+       gap: 2%;
+        }
+        .col2{
+         display: flex;
+         margin-top: 4%;
+        justify-content: center;
+        align-items:flex-start;
+       gap: 2%;
+        }
+        .place1{
+            height: 50px;
+            width: 310px;
+            background-color:rgb(248, 251, 254);
+            border: 1px solid green;
+
+        }
+        .place2{
+            height: 50px;
+            width: 310px;
+            background-color:rgb(248, 251, 254);
+            border: 1px solid green;
+
+        }
+        .place3{
+            height: 50px;
+            width: 310px;
+            background-color:rgb(248, 251, 254);
+            border: 1px solid green;
+
+        }
+        .budget{
+            height: 50px;
+            width: 310px;
+            background-color:rgb(248, 251, 254);
+            border: 1px solid green;
+
+        }
+        .num{
+            height: 50px;
+            width: 310px;
+            background-color:rgb(248, 251, 254);
+            border: 1px solid green;
+
+        }
+        .date{
+            height: 50px;
+            width: 310px;
+            border-bottom: 1px solid green;
+            border-top: 1px solid green;
+            border-left:none ;
+            border-right: none;
+        }
+        .submit{
+            height: 50px;
+            width: 150px;
+            border: 1px solid green;
+            background-color: green;
+            color: wheat;
+        }
+        .form input{
+            border-radius: 5px;
+        }
+        .col3{
+            display: flex;
+         margin-top: 4%;
+        justify-content: center;
+        align-items:flex-start;
+       gap: 50%;
+        }
+        input::placeholder{
+            padding-left: 5px;
+        }
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    backdrop-filter: blur(40px);
+    position: sticky;
+    top: 0;
+    z-index: 5;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    position: relative;
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    padding: 0 10px;
+}
+
+.nav-links a:after {
+    content: "";
+    position: absolute;
+    background-color: #578FCA;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -10px;
+    transition: 0.3s;
+}
+.nav-links a.active:after {
+    width: 100%;
+}
+.nav-links a.active {
+    background: transparent;
+    color: black; /* or your default link color */
+}
+
+.nav-links a:hover:after {
+    width: 100%;
+}
+
+.book-trip {
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/*------------------------------------------- profile ------------------------*/
+.book-trip:hover {
+    background-color: #2887ff;
+}
+/* Profile Dropdown */
+.book-trip {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 15px;
+    background: black;
+    color: white;
+    border-radius: 25px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Arrow rotation effect */
+.dropdown-arrow {
+    transition: transform 0.3s ease;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 80%;
+    right: 2.5%;
+    background: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    width: 150px;
+    z-index: 100;
+}
+
+.dropdown-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.dropdown-menu ul li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.dropdown-menu ul li a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+}
+
+.dropdown-menu ul li:hover {
+    background: #007bff;
+    color: white;
+}
+
+/* Hover or Click Effect */
+.navbar .book-trip:hover + .dropdown-menu,
+.navbar .dropdown-menu:hover {
+    display: block;
+}
+
+.navbar .book-trip:hover .dropdown-arrow,
+.navbar .dropdown-menu:hover ~ .book-trip .dropdown-arrow {
+    transform: rotate(90deg);
+}
+.tour-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 33%;
+    position: relative;
+    transition: 0.3s;
+}
+
+.tour-card img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+}
+
+.tour-info {
+    padding: 15px;
+}
+
+.tour-info h3 {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.tour-info p {
+    margin: 5px 0;
+    color: gray;
+}
+
+.rating i {
+    color: rgb(224, 224, 0);
+}
+
+.price {
+    font-weight: bold;
+    color: #333;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: red;
+    margin-right: 5px;
+}
+
+.discount-tag {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: red;
+    color: white;
+    padding: 5px 10px;
+    font-size: 14px;
+    border-radius: 5px;
+}
+.tour-card button{
+    padding: 5px;
+    background-color: red;
+    color: white;
+    border: 1px solid white;
+}
+.main{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 2%;
+    height: auto;
+    width: 100%;
+    gap: 2%;
+    padding-left: 10%;
+}
+footer {
+    background-color: #bee4ff;
+    padding: 20px 20px;
+}
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.footer-section {
+    flex: 1;
+    margin: 10px;
+    min-width: 200px;
+}
+.footer-section h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+.footer-section ul li {
+    margin-bottom: 8px;
+}
+.footer-section ul li a {
+    text-decoration: none;
+    color: #333;
+}
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+.social-icons {
+    display: flex;
+    gap: 10px;
+}
+.social-icons a img {
+    width: 30px;
+    height: 30px;
+}
+
+.wrapper {
+    display: inline-flex;
+}
+
+.wrapper .icon {
+    margin: 0 20px;
+    text-align: center;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    position: relative;
+    z-index: 2;
+    transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon span {
+    display: block;
+    height: 60px;
+    width: 60px;
+    background: #fff;
+    border-radius: 50%;
+    position: relative;
+    z-index: 2;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.5);
+    transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon span i {
+    line-height: 60px;
+    font-size: 25px;
+}
+
+.wrapper .icon .tooltip {
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    background: #fff;
+    color: #fff;
+    padding: 10px 18px;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 25px;
+    opacity: 0;
+    pointer-events: none;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+    transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon:hover .tooltip {
+    top: 0px;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.icon .tooltip:before {
+    position: absolute;
+    content: "";
+    height: 15px;
+    width: 15px;
+    background: #fff;
+    left: 50%;
+    bottom: -6px;
+    transform: translateX(-50%) rotate(45deg);
+    transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+
+
+.wrapper .icon:hover span {
+    color: #fff;
+}
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.4);
+}
+
+
+
+.wrapper .facebook:hover span,
+.wrapper .facebook:hover .tooltip,
+.wrapper .facebook:hover .tooltip:before {
+    background: #3B5999;
+}
+
+.wrapper .twitter:hover span,
+.wrapper .twitter:hover .tooltip,
+.wrapper .twitter:hover .tooltip:before {
+    background: #46C1F6;
+}
+
+.wrapper .instagram:hover span,
+.wrapper .instagram:hover .tooltip,
+.wrapper .instagram:hover .tooltip:before {
+    background: #e1306c;
+}
+
+.wrapper .github:hover span,
+.wrapper .github:hover .tooltip,
+.wrapper .github:hover .tooltip:before {
+    background: #333;
+}
+
+.wrapper .youtube:hover span,
+.wrapper .youtube:hover .tooltip,
+.wrapper .youtube:hover .tooltip:before {
+    background: #DE463B;
+}
+
+
+
+
+
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+}
+.footer-bottom p {
+    margin: 0;
+}
+.payment-icons img {
+    width: 50px;
+    margin-left: 10px;
+}
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">Skywings</div>
+        <ul class="nav-links">
+            <li><a href="/home">HOME</a></li>
+            <li><a href="/about">ABOUT</a></li>
+            <li><a href="/trip">CUSTOMIZE-TRIPS</a></li>
+            <li><a href="/package">PACKAGE & TOUR</a></li>
+            <li><a href="/contact">CONTACT</a></li>
+        </ul>
+        <a href="#" class="book-trip">
+            Profile <i class="fa-solid fa-user"></i> 
+            <i class="fa-solid fa-chevron-right dropdown-arrow"></i>
+        </a>
+        <div class="dropdown-menu">
+            <ul>
+                <li><a href="profile.html">My Account</a></li>
+                <li><a href="booking.html">Bookings</a></li>
+                <li><a href="#">Logout</a></li>
+            </ul>
+        </div>
+
+    </nav>
+    <div class="heading">
+        <h1>Custom Trips</h1>
+    </div>
+    <div class="form">
+       <div class="col">
+        <input type="text" placeholder="Enter your city name:" class="place1" id="place1">
+        <input type="text" placeholder="Enter the first place:" class="place2" id="place2">
+        <input type="text" placeholder="Enter your second place:" class="place3" id="place3">
+       </div>
+       <div class="col2">
+        <input type="text" placeholder="Write your budget" class="budget" id="budget">
+        <input type="number" placeholder="Select the number of people" class="num" min="0" max="5">
+  
+       </div>
+       <div class="col3">
+        <input type="date" placeholder="Write your budget" class="date" id="date" > 
+        <input type="submit" placeholder="Select the number of people" class="submit" id="submit">
+  
+       </div>
+    </div>
+    <div class="main" id="main">
+        
+    </div>
+    <div class="main" id="main2">
+        
+    </div>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Support</h3>
+                <ul>
+                    <li><a href="helpcenter.html">Help Center</a></li>
+           
+                    <li><a href="safety_opt.html">Safety information</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="about.html">About us</a></li>
+                    <li><a href="travelguidline.html">Travel Guidlines</a></li>
+                    <li><a href="privacy.html">Privacy policy</a></li>
+                    <li><a href="termsofservice.html">Terms of service</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <ul>
+                    
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="contact.html">Get in touch</a></li>
+                </ul>
+            </div>
+            <div class="wrapper">
+                <!-- <div class="icon facebook">
+                    <div class="tooltip">
+                        Facebook
+                    </div>
+                    <span><i class="fab fa-facebook-f"></i></span>
+                </div> -->
+                <div class="icon twitter">
+                    <div class="tooltip">
+                        Twitter
+                    </div>
+                    <span><i class="fab fa-twitter"></i></span>
+                </div>
+                <div class="icon instagram">
+                    <div class="tooltip">
+                        Instagram
+                    </div>
+                    <span><i class="fab fa-instagram"></i></span>
+                </div>
+                <div class="icon github">
+                    <div class="tooltip">
+                        Github
+                    </div>
+                    <span><i class="fab fa-github"></i></span>
+                </div>
+                <div class="icon youtube">
+                    <div class="tooltip">
+                        YouTube
+                    </div>
+                    <span><i class="fab fa-youtube"></i></span>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; Skywings</p>
+            <div class="payment-icons">
+                <img src="/img/paycard1.png" alt="Visa">
+                <img src="/img/paycard2.svg" alt="Mastercard">
+                <img src="/img/paycard3.jpeg" alt="Discover">
+                <img src="/img/paycard4.png" alt="PayPal">
+            </div>
+        </div>
+    </footer>
+<script src="trip.js"></script>
+</body>
+<script>
+
+const currentPath = window.location.pathname;
+
+    const navLinks = document.querySelectorAll('.nav-links a');
+
+    navLinks.forEach(link => {
+        if (link.getAttribute('href') === currentPath) {
+            link.classList.add('active');
+        }
+    });
+ let newd = document.getElementById('date');
+newd.valueAsDate = new Date();
+
+</script>
+</html>

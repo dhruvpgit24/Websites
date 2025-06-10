@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>HEllo</h1>
+    <div id="main"></div>
+</body>
+<script>
+    let main = document.getElementById('main');
+    let newarr = [];
+    
+    for(let [key, value] of Object.entries(localStorage)){
+        newarr.push(value)
+       
+    }
+   
+    let str = newarr.toString();
+    let newarr2 = str.split(" ");
+    
+   for(let i = 0; i < newarr.length; i++){
+    console.log(newarr2[i]);
+   }
+    let arr = newarr.map((elem, i) => {
+        return `
+         <div><h1>${elem}</h1></div>
+        `
+    }).join(" ");
+    main.innerHTML = arr;
+</script>
+</html>

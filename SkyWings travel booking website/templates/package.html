@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skywings</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="package.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">Skywings</div>
+        <ul class="nav-links">
+            <li><a href="/home">HOME</a></li>
+            <li><a href="/about">ABOUT</a></li>
+            <li><a href="/trip">CUSTOMIZE-TRIPS</a></li>
+            <li><a href="/package">PACKAGE & TOUR</a></li>
+            <li><a href="/contact">CONTACT</a></li>
+        </ul>
+        <a href="#" class="book-trip">
+            Profile <i class="fa-solid fa-user"></i>
+            <i class="fa-solid fa-chevron-right dropdown-arrow"></i>
+        </a>
+        <div class="dropdown-menu">
+            <ul>
+                <li><a href="profile.html">My Account</a></li>
+                <li><a href="booking.html">Bookings</a></li>
+                <li><a href="#">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+    <header>
+        <div class="img">
+            <h1>OUR PACKAGES</h1>
+        </div>
+        <div class="section" id="section">
+            <div class="select">
+                <label for="destinations">Select Your Destination: </label><br><br>
+                <select name="destinations" class="select1" id="select1">
+                    <option value="ALL">ALL</option>
+                    <option value="USA">USA</option>
+                    <option value="Australia">Australia</option>
+                    <option value="New-Zealand">New-Zealand</option>
+                    <option value="Japan">Japan</option>
+                    <option value="Europe">Europe</option>
+                    <option value="China">China</option>
+                    <option value="India">India</option>
+                </select>
+            </div>
+            <div class="packages" id="packages">
+                <div class="trending-tours">
+                    <h2 class="Best">Best<span class="highlight"> Tour Packages</span></h2>
+                    <div class="place-img" data-city="Australia">
+                        <h1 class="place-h1">
+                            Explore Australia
+                        </h1>
+                    </div>
+                    <div class="tour-container" data-city="Australia">
+                        <div class="tour-card">
+
+                            <img src="packageimg/Sydney-category-lead.jpg" alt="New York Tour">
+                            <div class="tour-info">
+                                <h3>Trip of Sydney</h3>
+                                <p><i class="location-icon"></i> Sydney, Australia</p>
+                                <div class="rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> <span> <b>20
+                                            Reviews</b></span></div>
+                                <p class="duration">⏳ 3 Days</p>
+                                <p class="price"><span class="old-price">$958,00</span><strong>$1760.00</strong></p>
+                                <Button data-id="1">Book Now</Button>
+                            </div>
+                        </div>
+                        <div class="tour-card">
+
+                            <img src="packageimg/download.jpg" alt="Washington Tour">
+                            <div class="tour-info">
+                                <h3>flight to Melbourn</h3>
+                                <p><i class="location-icon"></i>Melbourne, Australia</p>
+                                <div class="rating"> <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star-half-stroke"></i><span> <b>40 Review</b></span></div>
+                                <p class="duration">⏳ 3 days</p>
+                                <p class="price"><span class="old-price">$958,00</span><strong>$814,13</strong></p>
+                                <Button data-id="2">Book Now</Button>
+                            </div>
+                        </div>
+                        <div class="tour-card discount">
+
+                            <img src="packageimg/download2.jpg" alt="National Parks Tour">
+                            <div class="tour-info">
+                                <h3>Enjoy the beaches of Tasmania</h3>
+                                <p><i class="location-icon"></i>Tasmania, Australia</p>
+                                <div class="rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i> <span><b>18 Review</b></span></div>
+                                <p class="duration">⏳4 days</p>
+                                <p class="price">
+                                    <span class="old-price">$1200,00</span>
+                                    <strong>$1080,20</strong>
+                                </p>
+                                <Button data-id="3">Book Now</Button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tour-container" data-city="Australia">
+                        <div class="tour-card">
+
+                            <img src="packageimg/Sydney-category-lead.jpg" alt="New York Tour">
+                            <div class="tour-info">
+                                <h3>Take a round to Adelaide</h3>
+                                <p><i class="location-icon"></i> Adelaide, Australia</p>
+                                <div class="rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> <span> <b>20
+                                            Reviews</b></span></div>
+                                <p class="duration">⏳ 3 Days</p>
+                                <p class="price"><span class="old-price">$958,00</span><strong>$1760.00</strong></p>
+                                <Button data-id="4">Book Now</Button>
+                            </div>
+                        </div>
+                        <div class="tour-card">
+
+                            <img src="packageimg/download.jpg" alt="Washington Tour">
+                            <div class="tour-info">
+                                <h3>Tour of Brisbane</h3>
+                                <p><i class="location-icon"></i>Brisbane, Australia</p>
+                                <div class="rating"> <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star-half-stroke"></i><span> <b>40 Review</b></span></div>
+                                <p class="duration">⏳ 3 days</p>
+                                <p class="price"><span class="old-price">$958,00</span><strong>$814,13</strong></p>
+                                <Button data-id="5">Book Now</Button>
+                            </div>
+                        </div>
+                        <div class="tour-card discount">
+
+                            <img src="packageimg/download2.jpg" alt="National Parks Tour">
+                            <div class="tour-info">
+                                <h3>Enjoy Perth</h3>
+                                <p><i class="location-icon"></i>Perth, Australia</p>
+                                <div class="rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i> <span><b>18 Review</b></span></div>
+                                <p class="duration">⏳4 days</p>
+                                <p class="price">
+                                    <span class="old-price">$1200,00</span>
+                                    <strong>$1080,20</strong>
+                                </p>
+                                <Button data-id="6">Book Now</Button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="place-img" data-city="USA">
+                        <h1 class="place-h1">
+                            Take a trip to the superpower
+                        </h1>
+                    </div>
+                    <div class="tour-container" data-city="USA">
+                        <div class="tour-card">
+
+                            <img src="packageimg/nyc.jpg" alt="New York Tour">
+                            <div class="tour-info">
+                                <h3>Trip to NewYork</h3>
+                                <p><i class="location-icon"></i>New York, USA</p>
+                                <div class="rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> <span> <b>20
+                                            Reviews</b></span></div>
+                                <p class="duration">⏳ 5 Days</p>
+                                <p class="price"><span class="old-price">$2588,00</span><strong>$1760.00</strong></p>
+                                <Button data-id="7">Book Now</Button>
+                            </div>
+                        </div>
+                        <div class="tour-card">
+
+                            <img src="packageimg/washington.jpg" alt="Washington Tour">
+                            <div class="tour-info">
+                                <h3>Take a look at the white house</h3>
+                                <p><i class="location-icon"></i>Washington D.C, USA</p>
+                                <div class="rating"> <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star-half-stroke"></i><span> <b>40 Review</b></span></div>
+                                <p class="duration">⏳ 7 days</p>
+                                <p class="price"><span class="old-price">$3000.00</span><strong>$1900.13</strong></p>
+                                <Button data-id="8">Book Now</Button>
+                            </div>
+                        </div>
+                        <div class="tour-card discount">
+
+                            <img src="packageimg/losangeles.jpg">
+                            <div class="tour-info">
+                                <h3>Explore The Hollywood </h3>
+                                <p><i class="location-icon"></i>Los Angeles, USA</p>
+                                <div class="rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i> <span><b>18 Review</b></span></div>
+                                <p class="duration">⏳5 days</p>
+                                <p class="price">
+                                    <span class="old-price">$2200,00</span>
+                                    <strong>$3080,20</strong>
+                                </p>
+                                <Button data-id="9">Book Now</Button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tour-container" data-city="USA">
+                        <div class="tour-card">
+
+                            <img src="packageimg/hawai.jpg">
+                            <div class="tour-info">
+                                <h3>Enjoy Hawai</h3>
+                                <p><i class="location-icon"></i>Hawai, USA</p>
+                                <div class="rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> <span> <b>20
+                                            Reviews</b></span></div>
+                                <p class="duration">⏳ 3 Days</p>
+                                <p class="price"><span class="old-price">$3200,00</span><strong>$2600.00</strong></p>
+                                <Button data-id="10">Book Now</Button>
+                            </div>
+                        </div>
+                        <div class="tour-card">
+
+                            <img src="packageimg/lasvegas.jpg" alt="Washington Tour">
+                            <div class="tour-info">
+                                <h3>Play the games in las vegas</h3>
+                                <p><i class="location-icon"></i>Las vegas, USA</p>
+                                <div class="rating"> <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star-half-stroke"></i><span> <b>40 Review</b></span></div>
+                                <p class="duration">⏳ 3 days</p>
+                                <p class="price"><span class="old-price">$2300.00</span><strong>$3000</strong></p>
+                                <Button data-id="11">Book Now</Button>
+                            </div>
+                        </div>
+                        <div class="tour-card discount">
+
+                            <img src="packageimg/florida.jpg" alt="National Parks Tour">
+                            <div class="tour-info">
+                                <h3>Trip to the Flordia</h3>
+                                <p><i class="location-icon"></i>Florida, USA</p>
+                                <div class="rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i> <span><b>18 Review</b></span></div>
+                                <p class="duration">⏳4 days</p>
+                                <p class="price">
+                                    <span class="old-price">$1200,00</span>
+                                    <strong>$1080,20</strong>
+                                </p>
+
+                                <Button data-id="12">Book Now</Button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="place-img" data-city="Japan">
+                        <h1 class="place-h1">
+                            Explore the country of anime
+                        </h1>
+                    </div>
+                    <div class="tour-container" data-city="Japan">
+                        <div class="tour-card">
+
+                            <img src="img/tokyo.jpg" alt="New York Tour">
+                            <div class="tour-info">
+                                <h3>Climb the stairs of Tokyo-tower</h3>
+                                <p><i class="location-icon"></i>Tokyo, Japan</p>
+                                <div class="rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> <span> <b>20
+                                            Reviews</b></span></div>
+                                <p class="duration">⏳ 3 Days</p>
+                                <p class="price"><span class="old-price">$2200,00</span><strong>$1700.00</strong></p>
+                                <Button data-id="13">Book Now</Button>
+                            </div>
+                        </div>
+                        <div class="tour-card">
+
+                            <img src="img/osaka.jpg" alt="Washington Tour">
+                            <div class="tour-info">
+                                <h3>Explore Osaka</h3>
+                                <p><i class="location-icon"></i>Osaka, Japan</p>
+                                <div class="rating"> <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star-half-stroke"></i><span> <b>40 Review</b></span></div>
+                                <p class="duration">⏳ 5 days</p>
+                                <p class="price"><span class="old-price">$2100.00</span><strong>$1600.13</strong></p>
+                                <Button data-id="14">Book Now</Button>
+                            </div>
+                        </div>
+                        <div class="tour-card discount">
+
+                            <img src="packageimg/hokkaido.jpg">
+                            <div class="tour-info">
+                                <h3>Fly to Hokkaido</h3>
+                                <p><i class="location-icon"></i>Hokkaido, Japan</p>
+                                <div class="rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i> <span><b>18 Review</b></span></div>
+                                <p class="duration">⏳4 days</p>
+                                <p class="price">
+                                    <span class="old-price">$1800,00</span>
+                                    <strong>$1600,20</strong>
+                                </p>
+                                <Button data-id="15">Book Now</Button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="place-img" data-city="New-Zealand">
+                        <h1 class="place-h1">
+                            Explore the fields of New-Zealand
+                        </h1>
+                    </div>
+                    <div class="tour-container" data-city="New-Zealand">
+                        <div class="tour-card">
+
+                            <img src="packageimg/wellinghton.jpg" alt="New York Tour">
+                            <div class="tour-info">
+                                <h3>Trip to Wellinghton</h3>
+                                <p><i class="location-icon"></i>Wellinghton, New-Zealand</p>
+                                <div class="rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> <span> <b>20
+                                            Reviews</b></span></div>
+                                <p class="duration">⏳ 4 Days</p>
+                                <p class="price"><span class="old-price">$1588,00</span><strong>$1360.00</strong></p>
+                                <Button data-id="16">Book Now</Button>
+                            </div>
+                        </div>
+                        <div class="tour-card">
+
+                            <img src="packageimg/christchurch.jpg" alt="Washington Tour">
+                            <div class="tour-info">
+                                <h3>Explore christchurch</h3>
+                                <p><i class="location-icon"></i>Christchurch, New-Zealand</p>
+                                <div class="rating"> <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star-half-stroke"></i><span> <b>40 Review</b></span></div>
+                                <p class="duration">⏳ 5 days</p>
+                                <p class="price"><span class="old-price">$1600.00</span><strong>$1200.13</strong></p>
+                                <Button data-id="17">Book Now</Button>
+                            </div>
+                        </div>
+                        <div class="tour-card discount">
+
+                            <img src="packageimg/Auckland.jpg">
+                            <div class="tour-info">
+                                <h3>Enjoy the fields of Auckland</h3>
+                                <p><i class="location-icon"></i>Auckland, New-Zealand</p>
+                                <div class="rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i> <span><b>18 Review</b></span></div>
+                                <p class="duration">⏳4 days</p>
+                                <p class="price">
+                                    <span class="old-price">$1800,00</span>
+                                    <strong>$1600,20</strong>
+
+                                </p>
+                                <Button data-id="18">Book Now</Button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="place-img" data-city="Europe">
+                        <h1 class="place-h1">
+                            Fly to the continent of Europe
+                        </h1>
+                    </div>
+                    <div class="tour-container" data-city="Europe">
+                        <div class="tour-card">
+
+                            <img src="packageimg/italy.jpg" alt="New York Tour">
+                            <div class="tour-info">
+                                <h3>Take a trip to Italy</h3>
+                                <p><i class="location-icon"></i>Italy, Europe</p>
+                                <div class="rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> <span> <b>20
+                                            Reviews</b></span></div>
+                                <p class="duration">⏳ 7 Days</p>
+                                <p class="price"><span class="old-price">$4500.00</span><strong>$3300.00</strong></p>
+                                <Button data-id="19">Book Now</Button>
+                            </div>
+                        </div>
+                        <div class="tour-card">
+
+                            <img src="packageimg/poland.jpg" alt="Washington Tour">
+                            <div class="tour-info">
+                                <h3>Enjoy the trip of Poland</h3>
+                                <p><i class="location-icon"></i>Poland, Europe</p>
+                                <div class="rating"> <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star-half-stroke"></i><span> <b>40 Review</b></span></div>
+                                <p class="duration">⏳ 7 days</p>
+                                <p class="price"><span class="old-price">$4000.00</span><strong>$3200.00</strong></p>
+                                <Button data-id="20">Book Now</Button>
+                            </div>
+                        </div>
+                        <div class="tour-card discount">
+
+                            <img src="packageimg/france.jpg">
+                            <div class="tour-info">
+                                <h3>Fly to the France</h3>
+                                <p><i class="location-icon"></i>France , Europe</p>
+                                <div class="rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i> <span><b>35 Review</b></span></div>
+                                <p class="duration">⏳6 days</p>
+                                <p class="price">
+                                    <span class="old-price">$3800.00</span>
+                                    <strong>$2800.00</strong>
+                                </p>
+                                <Button data-id="21">Book Now</Button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tour-container" data-city="Europe">
+                        <div class="tour-card">
+
+                            <img src="packageimg/uk.jpg">
+                            <div class="tour-info">
+                                <h3>Fly to the United Kingdom</h3>
+                                <p><i class="location-icon"></i>United Kingdom, Europe</p>
+                                <div class="rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> <span> <b>20
+                                            Reviews</b></span></div>
+                                <p class="duration">⏳ 8 Days</p>
+                                <p class="price"><span class="old-price">$4800.00</span><strong>$4000.00</strong></p>
+                                <Button data-id="22">Book Now</Button>
+                            </div>
+                        </div>
+                        <div class="tour-card">
+
+                            <img src="packageimg/germany.jpg" alt="Washington Tour">
+                            <div class="tour-info">
+                                <h3>Enjoy Your time in Germany</h3>
+                                <p><i class="location-icon"></i>Germany, Europe</p>
+                                <div class="rating"> <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star-half-stroke"></i><span> <b>40 Review</b></span></div>
+                                <p class="duration">⏳ 6 days</p>
+                                <p class="price"><span class="old-price">$4000.00</span><strong>$3200.00</strong></p>
+                                <Button data-id="23">Book Now</Button>
+                            </div>
+                        </div>
+                        <div class="tour-card discount">
+
+                            <img src="packageimg/florida.jpg" alt="National Parks Tour">
+                            <div class="tour-info">
+                                <h3>Trip to the Spain</h3>
+                                <p><i class="location-icon"></i>Spain, Europe</p>
+                                <div class="rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i> <span><b>42 Review</b></span></div>
+                                <p class="duration">⏳6 days</p>
+                                <p class="price">
+                                    <span class="old-price">$4100,00</span>
+                                    <strong>$3200.20</strong>
+                                </p>
+                                <Button data-id="24">Book Now</Button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="place-img" data-city="China">
+                        <h1 class="place-h1">
+                            Explore China
+                        </h1>
+                    </div>
+                    <div class="tour-container" data-city="China">
+                        <div class="tour-card">
+
+                            <img src="packageimg/bej.jpg" alt="New York Tour">
+                            <div class="tour-info">
+                                <h3>Fly to the capital of Bejing</h3>
+                                <p><i class="location-icon"></i>Bejing, China</p>
+                                <div class="rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> <span> <b>20
+                                            Reviews</b></span></div>
+                                <p class="duration">⏳ 4 Days</p>
+                                <p class="price"><span class="old-price">$1400.00</span><strong>$1000.00</strong></p>
+                                <Button data-id="25">Book Now</Button>
+                            </div>
+                        </div>
+                        <div class="tour-card">
+
+                            <img src="packageimg/shen.jpg" alt="Washington Tour">
+                            <div class="tour-info">
+                                <h3>Enjoy your time near in the capital</h3>
+                                <p><i class="location-icon"></i>Shenzen, China</p>
+                                <div class="rating"> <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star-half-stroke"></i><span> <b>40 Review</b></span></div>
+                                <p class="duration">⏳ 5 days</p>
+                                <p class="price"><span class="old-price">$1300.00</span><strong>$900.13</strong></p>
+                                <Button data-id="26">Book Now</Button>
+                            </div>
+                        </div>
+                        <div class="tour-card discount">
+
+                            <img src="packageimg/Hk.jpg">
+                            <div class="tour-info">
+                                <h3>Explore Hong Kong</h3>
+                                <p><i class="location-icon"></i>Hong-Kong, China</p>
+                                <div class="rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i> <span><b>18 Review</b></span></div>
+                                <p class="duration">⏳4 days</p>
+                                <p class="price">
+                                    <span class="old-price">$1800,00</span>
+                                    <strong>$1600,20</strong>
+
+                                </p>
+                                <Button data-id="27">Book Now</Button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="place-img" data-city="India">
+                        <h1 class="place-h1">
+                            Take a trip to India
+                        </h1>
+                    </div>
+                    <div class="tour-container" data-city="India">
+                        <div class="tour-card">
+
+                            <img src="packageimg/delhi.jpg" alt="New York Tour">
+                            <div class="tour-info">
+                                <h3>Trip to Delhi</h3>
+                                <p><i class="location-icon"></i>Delhi, India</p>
+                                <div class="rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> <span> <b>40
+                                            Reviews</b></span></div>
+                                <p class="duration">⏳ 4 Days</p>
+                                <p class="price"><span class="old-price">$1500.00</span><strong>$1150.00</strong></p>
+                                <Button data-id="28">Book Now</Button>
+                            </div>
+                        </div>
+                        <div class="tour-card">
+
+                            <img src="packageimg/mumbai.jpg" alt="Washington Tour">
+                            <div class="tour-info">
+                                <h3>Enjoy the beaches of Mumbai</h3>
+                                <p><i class="location-icon"></i>Mumbai, India</p>
+                                <div class="rating"> <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star-half-stroke"></i><span> <b>40 Review</b></span></div>
+                                <p class="duration">⏳ 4 days</p>
+                                <p class="price"><span class="old-price">$1700.00</span><strong>$1400.00</strong></p>
+                                <Button data-id="29">Book Now</Button>
+                            </div>
+                        </div>
+                        <div class="tour-card discount">
+
+                            <img src="packageimg/chennai.jpg">
+                            <div class="tour-info">
+                                <h3>Fly to Chennai</h3>
+                                <p><i class="location-icon"></i>Chennai, India</p>
+                                <div class="rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i> <span><b>35 Review</b></span></div>
+                                <p class="duration">5 days</p>
+                                <p class="price">
+                                    <span class="old-price">$1400.00</span>
+                                    <strong>$1290.00</strong>
+
+                                </p>
+                                <Button data-id="30">Book Now</Button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tour-container" data-city="India">
+                        <div class="tour-card">
+
+                            <img src="packageimg/kolkata.jpg">
+                            <div class="tour-info">
+                                <h3>See the monuments of Kolkata</h3>
+                                <p><i class="location-icon"></i>Kolkata, India</p>
+                                <div class="rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> <span> <b>20
+                                            Reviews</b></span></div>
+                                <p class="duration">⏳ 5 Days</p>
+                                <p class="price"><span class="old-price">$1200,00</span><strong>$1100.00</strong></p>
+                                <Button data-id="31">Book Now</Button>
+                            </div>
+                        </div>
+                        <div class="tour-card">
+
+                            <img src="packageimg/ahmd.jpg" alt="Washington Tour">
+                            <div class="tour-info">
+                                <h3>Fly to Ahemdabad</h3>
+                                <p><i class="location-icon"></i>Ahemdabad, India</p>
+                                <div class="rating"> <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star-half-stroke"></i><span> <b>40 Review</b></span></div>
+                                <p class="duration">⏳ 5 days</p>
+                                <p class="price"><span class="old-price">$1300.00</span><strong>$1100.00</strong></p>
+                                <Button data-id="32">Book Now</Button>
+                            </div>
+                        </div>
+                        <div class="tour-card discount">
+
+                            <img src="packageimg/banglore.jpg" alt="National Parks Tour">
+                            <div class="tour-info">
+                                <h3>Take a trip to Bengaluru</h3>
+                                <p><i class="location-icon"></i>Bengaluru, India</p>
+                                <div class="rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i> <span><b>18 Review</b></span></div>
+                                <p class="duration">⏳4 days</p>
+                                <p class="price">
+                                    <span class="old-price">$1200,00</span>
+                                    <strong>$1080,20</strong>
+                                </p>
+                                <Button data-id="33">Book Now</Button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+
+        </div>
+
+        <script src="package2.js"></script>
+</body>
+
+
+</html>
