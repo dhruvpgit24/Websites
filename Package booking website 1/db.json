@@ -1,0 +1,116 @@
+{
+  "adminCredentials": {
+    "username": "admin",
+    "password": "123"
+  },
+  "bookings": [
+    {
+      "id": "ff2f",
+      "name": "Rudra patel",
+      "email": "Rudra5@gmail.com",
+      "phone": "3019583959",
+      "address": "Maninagar",
+      "location": "India",
+      "guests": "5",
+      "arrivals": "2024-05-20",
+      "leaving": "2024-05-25"
+    },
+    {
+      "id": "8467",
+      "name": "Ansh",
+      "email": "ansh@gmail.com",
+      "phone": "3019583959",
+      "address": "Raipur",
+      "location": "India",
+      "guests": "5",
+      "arrivals": "2024-05-20",
+      "leaving": "2024-05-29"
+    },
+    {
+      "id": "3ef8",
+      "name": "Yash",
+      "email": "Yashrp@gmail.com",
+      "phone": "3019583966",
+      "address": "Mumbai",
+      "location": "India",
+      "guests": "2",
+      "arrivals": "2024-05-26",
+      "leaving": "2024-05-29"
+    },
+    {
+      "id": "cc16",
+      "name": "Rawknee",
+      "email": "Rawnkee@gmail.com",
+      "phone": "3019583959",
+      "address": "Dehli",
+      "location": "India",
+      "guests": "5",
+      "arrivals": "2024-05-26",
+      "leaving": "2024-05-31"
+    }
+  ],
+  "packages": [
+    {
+      "id": "1",
+      "name": "India",
+      "image": "images/img-1.jpg",
+      "description": "Explore the rich history and vibrant culture of India. From the majestic Taj Mahal to the bustling streets of Mumbai, there's an adventure waiting at every corner."
+    },
+    {
+      "id": "2",
+      "name": "Switzerland",
+      "image": "images/img-2.jpg",
+      "description": "Discover the serene landscapes of Switzerland with its picturesque mountains and peaceful lakes. Perfect for skiing in winter and hiking in summer."
+    },
+    {
+      "id": "3",
+      "name": "Latvia",
+      "image": "images/img-3.jpg",
+      "description": "Visit Latvia, a hidden gem in Europe known for its medieval architecture, pristine forests, and the vibrant capital city, Riga."
+    },
+    {
+      "id": "4",
+      "name": "France",
+      "image": "images/img-4.jpg",
+      "description": "Experience the romance of France, from the charming streets of Paris to the lavender fields of Provence and the stunning Riviera coastline."
+    },
+    {
+      "id": "5",
+      "name": "Japan",
+      "image": "images/img-5.jpg",
+      "description": "Immerse yourself in the unique culture of Japan, where ancient traditions blend with modern technology. Explore bustling Tokyo, historic Kyoto, and the beautiful cherry blossoms."
+    },
+    {
+      "id": "6",
+      "name": "Australia",
+      "image": "images/img-6.jpg",
+      "description": "Adventure awaits in Australia, from the iconic Sydney Opera House to the Great Barrier Reef and the mysterious Outback."
+    },
+    {
+      "id": "7",
+      "name": "Brazil",
+      "image": "images/img-7.jpg",
+      "description": "Experience the vibrant culture of Brazil, known for its lively festivals, stunning beaches, and the Amazon rainforest."
+    },
+    {
+      "id": "8",
+      "name": "Egypt",
+      "image": "images/img-8.jpg",
+      "description": "Step back in time and explore the mysteries of Egypt. Visit the Great Pyramids of Giza, the Sphinx, and cruise the Nile River."
+    },
+    {
+      "id": "9",
+      "name": "South Africa",
+      "image": "images/img-9.jpg",
+      "description": "Discover the diverse landscapes and wildlife of South Africa. Go on a safari in Kruger National Park and explore the vibrant city of Cape Town."
+    }
+  ],
+  "users": [
+    {
+      "id": "8734",
+      "username": "Testing",
+      "email": "test@gmail.com",
+      "password": "12345"
+    }
+  ]
+}

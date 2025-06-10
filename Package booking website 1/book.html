@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Book Your Trip</title>
+   <link rel="icon" type="image/x-icon" href="/images/favicon.png">
+   <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+   <link rel="stylesheet" href="scss/styles.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+</head>
+
+<body>
+
+   <section class="header">
+      <a href="index.html" class="logo">travel.</a>
+      <nav class="navbar">
+         <a href="index.html">Home</a>
+         <a href="package.html">Package</a>
+         <a href="book.html">Book</a>
+         <a href="about.html">About</a>
+      </nav>
+      <div id="menu-btn" class="fas fa-bars"></div>
+   </section>
+
+   <div class="heading" style="background:url(images/header-bg-3.png) no-repeat">
+      <h1>book now</h1>
+   </div>
+
+   <section class="booking">
+      <h1 class="heading-title">Book your trip!</h1>
+      <form action="book_form.html" method="post" class="book-form" id="book-form">
+         <div class="flex">
+            <div class="inputBox">
+               <span>Name:</span>
+               <input type="text" placeholder="Enter your name" name="name">
+            </div>
+            <div class="inputBox">
+               <span>Email:</span>
+               <input type="email" placeholder="Enter your email" name="email">
+            </div>
+            <div class="inputBox">
+               <span>Phone:</span>
+               <input type="text" placeholder="Enter your phone number" name="phone">
+            </div>
+            <div class="inputBox">
+               <span>Address:</span>
+               <input type="text" placeholder="Enter your address" name="address">
+            </div>
+            <div class="inputBox">
+               <span>Destination:</span>
+               <select name="location" id="destination-select">
+                  <option value="">Select a destination</option>
+               </select>
+            </div>
+
+            <div class="inputBox">
+               <span>Guests:</span>
+               <input type="number" placeholder="Number of guests" name="guests">
+            </div>
+            <div class="inputBox">
+               <span>Arrivals:</span>
+               <input type="date" name="arrivals">
+            </div>
+            <div class="inputBox">
+               <span>Leaving:</span>
+               <input type="date" name="leaving">
+            </div>
+         </div>
+         <input type="submit" value="Submit" class="btn" name="send">
+      </form>
+   </section>
+
+   <section class="footer">
+      <div class="box-container">
+         <div class="box">
+            <h3>quick links</h3>
+            <a href="index.html"> <i class="fas fa-angle-right"></i> Home</a>
+            <a href="package.html"> <i class="fas fa-angle-right"></i> Package</a>
+            <a href="book.html"> <i class="fas fa-angle-right"></i> Book</a>
+            <a href="about.html"> <i class="fas fa-angle-right"></i> About</a>
+         </div>
+         <div class="box">
+            <h3>contact info</h3>
+            <a href="#"> <i class="fas fa-phone"></i> 0092-301-9583959 </a>
+            <a href="#"> <i class="fas fa-phone"></i> 0092-301-5273527 </a>
+            <a href="#"> <i class="fas fa-envelope"></i> support@travelagency.com </a>
+            <a href="#"> <i class="fas fa-map"></i> Ahmedabad - 380008 </a>
+         </div>
+         <div class="box">
+            <h3>follow us</h3>
+            <a href="#"> <i class="fab fa-facebook-f"></i> facebook </a>
+            <a href="#"> <i class="fab fa-twitter"></i> twitter </a>
+            <a href="#"> <i class="fab fa-instagram"></i> instagram </a>
+            <a href="#"> <i class="fab fa-linkedin"></i> linkedin </a>
+         </div>
+      </div>
+      <div class="credit">all rights reserved! </div>
+   </section>
+
+   <script src="js/script.js"></script>
+   <script src="js/validateBookingForm.js"></script>
+</body>
+
+</html>

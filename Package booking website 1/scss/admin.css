@@ -1,0 +1,206 @@
+body {
+  font-family: "Arial", sans-serif;
+  background: #f4f4f9;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  height: 100vh;
+  justify-content: space-between;
+}
+
+.sidebar {
+  position: fixed;
+  width: 200px;
+  padding: 20px;
+  background: #8E44AD;
+  color: white;
+  display: block;
+  height: 100vh;
+}
+.sidebar button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  background: #A569BD;
+  color: white;
+  cursor: pointer;
+}
+.sidebar button:hover {
+  background: #9B59B6;
+}
+
+.container {
+  position: absolute;
+  top: 10px;
+  right: 80px;
+  min-height: 90vh;
+  width: 1100px;
+  padding: 20px;
+  background: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.form-addpkg {
+  margin: auto;
+  width: 900px;
+}
+
+.container-login {
+  flex-grow: 1;
+  max-width: 20%;
+  margin: auto;
+  padding: 20px;
+  background: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  position: relative;
+}
+
+.date-time {
+  text-align: left;
+  color: white;
+  font-weight: bold;
+  font-size: 0.9em;
+  margin-bottom: 20px;
+}
+
+.admin-title {
+  margin: 1px;
+  font-size: 1em;
+}
+
+.header {
+  color: #8E44AD;
+  margin-top: 20px;
+  /* Increased margin to accommodate date-time */
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.action-button {
+  background-color: #8E44AD;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+}
+.action-button:hover {
+  background-color: #792e99;
+}
+
+.hidden {
+  display: none;
+}
+
+#loginError {
+  color: red;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  background-color: #8e44ad;
+  color: white;
+  width: 300px;
+  /* or your preferred width */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  position: relative;
+}
+
+.card-header {
+  padding: 15px;
+  font-size: 20px;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.card-body {
+  padding: 10px 15px;
+  line-height: 1.5;
+}
+.card-body p {
+  margin: 5px 0;
+}
+
+.delete-btn {
+  border: none;
+  background: none;
+  color: white;
+  cursor: pointer;
+  float: right;
+  font-size: 16px;
+}
+.delete-btn:hover {
+  color: #f00;
+}
+
+.package-image {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.delete-package-btn {
+  border: none;
+  background: none;
+  color: white;
+  cursor: pointer;
+  float: right;
+  font-size: 16px;
+}
+.delete-package-btn:hover {
+  color: #f00;
+}
+
+.disabled {
+  cursor: none;
+}
+
+.refresh-button {
+  position: absolute;
+  right: 20px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  margin-left: 10px;
+}
+.refresh-button.spin i {
+  animation: spin 1s linear infinite;
+}
+
+/* CSS for Email Now button */
+.mail-btn {
+  background-color: #792e99;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  transition: margin-bottom 0.3s ease;
+}
+.mail-btn:hover {
+  margin-bottom: 2px;
+}/*# sourceMappingURL=admin.css.map */
