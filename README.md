@@ -1,1 +1,1 @@
-
+This repository contains all of my major frontend development projects. Each folder includes a different domain-specific project built using HTML, CSS, JavaScript, and React. This repo serves as a centralized showcase of my work for portfolio and job application purposes.
