@@ -1,0 +1,91 @@
+.my-listings {
+  padding: 40px;
+  background-color: #f9fafe;
+  min-height: 100vh;
+}
+
+.my-listings h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #1f2937;
+}
+
+.empty-msg {
+  font-size: 18px;
+  color: #6b7280;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.listing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.book-card {
+  background: white;
+  padding: 16px;
+  border-radius: 10px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  transition: 0.3s ease;
+  text-align: center;
+}
+
+.book-card:hover {
+  transform: translateY(-4px);
+  background-color: #eef2ff;
+}
+
+.book-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+
+.book-card h3 {
+  font-size: 18px;
+  color: #111827;
+  margin-bottom: 4px;
+}
+
+.book-card p {
+  font-size: 14px;
+  color: #374151;
+  margin-bottom: 4px;
+}
+
+.book-description {
+  font-size: 14px;
+  margin: 10px 0;
+  color: #4b5563;
+}
+
+.remove-btn {
+  background-color: #ef4444;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  margin-top: 10px;
+  transition: background 0.3s ease;
+}
+
+.remove-btn:hover {
+  background-color: #dc2626;
+}
+
+@media screen and (max-width: 768px) {
+  .listing-grid {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  }
+
+  .book-card img {
+    height: 140px;
+  }
+}

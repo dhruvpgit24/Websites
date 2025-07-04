@@ -1,0 +1,98 @@
+.book-detail {
+  padding: 60px 40px;
+  background-color: #f8f9ff;
+  color: #1f2937;
+}
+
+.back-btn {
+  background-color: #6366f1;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-bottom: 30px;
+  font-weight: 500;
+}
+
+.back-btn:hover {
+  background-color: #4f46e5;
+}
+
+.detail-content {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.book-cover {
+  max-width: 250px;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.book-info {
+  flex: 1;
+}
+
+.book-info h2 {
+  font-size: 28px;
+  margin-bottom: 16px;
+}
+
+.book-desc {
+  font-size: 16px;
+  margin-bottom: 16px;
+  color: #374151;
+}
+
+.book-subjects {
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 10px;
+}
+
+.buy-details {
+  margin-top: 30px;
+}
+
+.price,
+.location,
+.condition {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.contact-btn {
+  display: inline-block;
+  background-color: #00adb5;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 12px;
+  transition: 0.3s ease;
+}
+
+.contact-btn:hover {
+  background-color: #028b90;
+}
+
+@media screen and (max-width: 768px) {
+  .detail-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .book-info {
+    max-width: 100%;
+  }
+
+  .book-cover {
+    width: 200px;
+  }
+}

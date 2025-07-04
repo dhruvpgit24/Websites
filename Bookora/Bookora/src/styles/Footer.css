@@ -1,0 +1,27 @@
+.footer {
+    background-color: #1f2937;
+    color: #e5e7eb;
+    text-align: center;
+    padding: 40px 20px 25px;
+    font-size: 14px;
+  }
+  
+  .footer-brand h2 {
+    color: #f97316;
+    font-size: 24px;
+    margin-bottom: 8px;
+  }
+  
+  .footer-brand p {
+    color: #cbd5e1;
+    margin: 0 0 20px;
+    font-size: 15px;
+  }
+  
+  .footer-bottom {
+    border-top: 1px solid #374151;
+    padding-top: 15px;
+    color: #9ca3af;
+    font-size: 13px;
+  }
+  

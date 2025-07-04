@@ -1,0 +1,156 @@
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 40px;
+  background: #eff3ff;
+  color: #111827;
+  flex-wrap: wrap;
+}
+
+.hero-text {
+  max-width: 500px;
+}
+
+.promo {
+  font-size: 16px;
+  color: #6366f1;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.quote-line {
+  font-size: 30px;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  line-height: 1.4;
+}
+
+.cursor {
+  display: inline-block;
+  width: 2px;
+  animation: blinkCursor 0.8s steps(2) infinite;
+  margin-left: 4px;
+  height: 1em;
+}
+
+.subtext {
+  font-size: 16px;
+  color: #374151;
+  margin-bottom: 20px;
+}
+
+.hero-buttons button {
+  margin-right: 15px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.explore-btn {
+  background: #6366f1;
+  color: white;
+}
+
+.explore-btn:hover {
+  background: #443ce1;
+  transition: 0.3s;
+}
+
+.hero-images {
+  position: relative;
+  display: flex;
+  gap: 40px;
+  perspective: 1000px;
+  margin-top: 40px;
+}
+
+.book {
+  width: 160px;
+  max-width: 100%;
+  height: auto;
+  transform-style: preserve-3d;
+  transition: transform 0.4s ease, box-shadow 0.3s ease;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.book:hover {
+  transform: rotateY(3deg) rotateX(5deg) scale(1.1);
+  box-shadow: 0 30px 50px rgba(0, 0, 0, 0.592), 0 0 30px rgba(99, 102, 241, 0.3);
+}
+
+@media screen and (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-images {
+    justify-content: center;
+    margin-top: 30px;
+    gap: 20px;
+  }
+
+  .book {
+    width: 120px;
+  }
+
+  .quote-line {
+    white-space: normal;
+    text-overflow: unset;
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .book {
+    width: 90px;
+  }
+
+  .quote-line {
+    font-size: 18px;
+  }
+
+  .hero-buttons button {
+    padding: 10px 16px;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #f97316;
+  }
+}
+
+@keyframes blinkCursor {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

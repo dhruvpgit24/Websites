@@ -1,0 +1,47 @@
+.how-it-works {
+  background-color: #f0f4ff;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.how-it-works h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+  color: #111827;
+}
+
+.steps {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.step {
+  background-color: white;
+  padding: 30px 20px;
+  border-radius: 12px;
+  width: 280px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.step:hover {
+  transform: translateY(-5px);
+}
+
+.icon {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.step h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #4f46e5;
+}
+
+.step p {
+  font-size: 15px;
+  color: #374151;
+}

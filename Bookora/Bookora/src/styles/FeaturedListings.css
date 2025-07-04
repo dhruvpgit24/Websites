@@ -1,0 +1,58 @@
+.featured-listings {
+    padding: 60px 40px;
+    background-color: #e3ebff;
+    text-align: center;
+  }
+  
+  .featured-listings h2 {
+    font-size: 28px;
+    margin-bottom: 40px;
+    color: #1f2937;
+  }
+  
+  .book-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+  }
+  
+  .book-card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    width: 180px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .book-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .book-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  
+  .book-card h4 {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .book-card p {
+    font-size: 14px;
+    color: #374151;
+    margin: 4px 0;
+  }
+  
+  .book-card small {
+    font-size: 12px;
+    color: #6b7280;
+  }
+  
