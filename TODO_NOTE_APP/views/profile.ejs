@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: "Segoe UI", sans-serif;
+      }
+
+      body {
+        background: linear-gradient(to right, #f5f7fa, #c3cfe2);
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 40px 20px;
+      }
+
+      .wrapper {
+        position: relative;
+        max-width: 600px;
+        width: 100%;
+      }
+
+      .logout-btn {
+        position: absolute;
+        top: -15px;
+        right: -15px;
+        background-color: #ff4b5c;
+        color: white;
+        border: none;
+        padding: 8px 14px;
+        border-radius: 50px;
+        font-size: 14px;
+        cursor: pointer;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        transition: background 0.3s;
+      }
+
+      .logout-btn:hover {
+        background-color: #e04350;
+      }
+
+      .container {
+        background: white;
+        padding: 30px;
+        border-radius: 16px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        margin-bottom: 30px;
+      }
+
+      .container h2 {
+        font-size: 28px;
+        color: #333;
+        margin-bottom: 10px;
+      }
+
+      .container h1 {
+        font-size: 22px;
+        color: #6c63ff;
+        margin-bottom: 5px;
+      }
+
+      .container p {
+        color: #555;
+        margin-bottom: 20px;
+      }
+
+      textarea {
+        width: 100%;
+        padding: 12px;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+        font-size: 16px;
+        resize: none;
+        margin-bottom: 20px;
+        transition: border-color 0.3s ease;
+      }
+
+      textarea:focus {
+        outline: none;
+        border-color: #6c63ff;
+      }
+
+      input[type="submit"] {
+        background-color: #6c63ff;
+        color: white;
+        border: none;
+        padding: 12px 20px;
+        font-size: 16px;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        display: block;
+        width: 100%;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #554ed8;
+      }
+
+      .posts {
+        background: white;
+        padding: 20px 30px;
+        border-radius: 16px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      }
+
+      .posts h3 {
+        font-size: 22px;
+        color: #333;
+        margin-bottom: 20px;
+      }
+
+      .postcontainer {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+
+      .post-card {
+        background: #f8f9ff;
+        padding: 20px;
+        border-radius: 14px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+        transition: transform 0.2s ease;
+      }
+
+      .post-card:hover {
+        transform: translateY(-3px);
+      }
+
+      .post-card h4 {
+        color: #6c63ff;
+        font-size: 16px;
+        margin-bottom: 8px;
+      }
+
+      .post-card p {
+        color: #444;
+        font-size: 15px;
+        line-height: 1.5;
+      }
+
+      .post-actions {
+        margin-top: 12px;
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        align-items: center;
+      }
+
+      .like-btn,
+      .edit-btn,
+      .delete-btn {
+        border: none;
+        padding: 6px 14px;
+        font-size: 14px;
+        border-radius: 50px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        color: white;
+        text-decoration: none;
+        display: inline-block;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      .like-btn {
+        background-color: #00b894;
+      }
+
+      .like-btn:hover {
+        background-color: #019875;
+      }
+
+      .edit-btn {
+        background-color: #0984e3;
+      }
+
+      .edit-btn:hover {
+        background-color: #067bc2;
+      }
+
+      .delete-btn {
+        background-color: #d63031;
+      }
+
+      .delete-btn:hover {
+        background-color: #c0392b;
+      }
+
+      .like-count {
+        font-size: 13px;
+        color: #555;
+        margin-top: 6px;
+        margin-left: 2px;
+      }
+
+      @media (max-width: 600px) {
+        .wrapper {
+          padding: 10px;
+        }
+        .post-actions {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+        input[type="submit"] {
+          font-size: 14px;
+          padding: 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <button class="logout-btn" onclick="location.href='/logout'">Logout</button>
+
+      <div class="container">
+        <div>
+          <h2>Profile</h2>
+          <h1>Hello <%= user.name %></h1>
+          <p>You can make a new post</p>
+        </div>
+        <form action="/post" method="post">
+          <textarea
+            name="content"
+            id="post"
+            placeholder="Write your post..."
+            rows="6"
+          ></textarea>
+          <input type="submit" value="Publish Post" />
+        </form>
+      </div>
+
+      <div class="posts">
+        <h3>Your Posts</h3>
+        <div class="postcontainer">
+          <% user.posts.slice().reverse().forEach(function(post){ %>
+          <div class="post-card">
+            <h4>@<%= user.username %></h4>
+            <p><%= post.content %></p>
+            <div class="post-actions">
+              <a class="like-btn" href="/like/<%= post._id %>">
+                <%= post.likes.indexOf(user._id) === -1 ? '❤️ Like' : '💔 Unlike' %>
+              </a>
+              <a class="edit-btn" href="/edit/<%= post._id %>">✏️ Edit</a>
+              <a class="delete-btn" href="/delete/<%= post._id %>">🗑️ Delete</a>
+              <span class="like-count">👍 <%= post.likes.length %> Like<%= post.likes.length !== 1 ? 's' : '' %></span>
+            </div>
+          </div>
+          <% }) %>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
