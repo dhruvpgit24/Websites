@@ -1,0 +1,136 @@
+.blogs{
+    width: 100%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+.types{
+   
+    width: 750px;
+    height: 60px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+}
+.types span{
+    color: gray;
+    font-weight: bold;
+    font-size: large;
+    background-color: white;
+    padding-top: 6px;
+    padding-bottom: 8px;
+    padding-left: 18px;
+    padding-right: 18px;
+    border-radius: 18px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.blog{
+    width: 90%;
+    height: auto;
+   
+    margin-top: 2%;
+}
+.blog{
+   display: grid;
+   grid-template-columns: 350px 350px 350px 350px;
+   gap: 2%;
+   justify-content: center;
+
+}
+.bl{
+
+    height: 400px;
+    box-shadow: 0 1px 0.5px;
+    border-radius: 8px;
+    box-shadow: 0 0 12px rgba(99,102,241,0.7);
+}
+.img{
+    width: 100%;
+    height: 50%;
+    
+}
+.bl img{
+width: 100%;
+border-top-left-radius: 8px;
+border-top-right-radius: 8px;
+height: 100%;
+}
+.txt{
+    width: 100%;
+    height: 50%;
+    padding-left: 3%;
+    padding-right: 2%;
+    padding-top: 6%;
+}
+.P-P2{
+    margin-top: 6%;
+    font-weight: bolder;
+    color: gray;
+    font-size: large;
+}
+.P-P1{
+    margin-top: 6%;
+    font-size: larger;
+    font-weight: bolder;
+    color: black;
+}
+.bl span{
+    background-color: #dbd1f5;
+    padding: 8px;
+    border-radius: 50px;
+   font-size: small;
+}
+.bl:hover{
+    transform: scale(1.05);
+    transition: 0.5s;
+    cursor: pointer;
+}
+.subs{
+    margin-top: 10%;
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+.subs h2{
+    font-size: 50px;
+    animation-name: anim;
+    animation-iteration-count: infinite;
+    animation-duration: 5.5s ;
+
+}
+@keyframes anim{
+    0%{
+        color: black;
+    }
+    25%{
+        color: #4500e2;
+    }
+    50%{
+     color: blueviolet;
+    }
+    75%{
+        color: plum;
+    } 
+    100%{
+     color: black;
+    }
+}
+.subs p{
+    font-size: larger;
+    font-weight: bolder;
+    color: gray;
+    letter-spacing: 1px;
+ 
+}
+.subs span{
+    color: #4500e2;
+}

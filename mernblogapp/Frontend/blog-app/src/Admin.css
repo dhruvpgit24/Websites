@@ -1,0 +1,138 @@
+.admin{
+
+    position: absolute;
+    right: 0;
+    width: 1205px;
+    height: 618px;
+    bottom: 0;
+    background-color: aliceblue;
+     box-shadow: 0 0 5px gray;
+}
+.lengths{
+    display: flex;
+    width: 100%;
+    height: 200px;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 3%;
+    gap: 2%;
+}
+.box{
+    width: 250px;
+    height: 100px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px grey;
+    display: flex;
+}
+.imgs{
+    height: 100%;
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.info{
+    height: 100%;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items:  flex-start;
+    justify-content:center;
+    padding-left: 2%;
+    gap: 10px;
+}
+.info p{
+    color: gray;
+    font-weight: bold;
+    font-size: medium;
+}
+.table{
+    width: 850px;
+    height: auto;
+    background-color: white;
+     box-shadow: 0 0 10px gray;
+     margin-left: 3%;
+     border-radius: 5px;
+     padding-left: 2%;
+     padding-right: 2%;
+     padding-bottom: 2%;
+}
+.th{
+    display: flex;
+    list-style-type: none;
+    padding-top: 2%;
+    font-weight: bolder;
+  
+    padding-bottom: 2%;
+    border-bottom: 1px solid grey;
+}
+.tr div li{
+    list-style-type: none;
+}
+.tr div{
+    display: flex;
+  
+}
+.green{
+    color: green;
+}
+.tr .title{
+    width: 200px;
+}
+.num{
+width: 50px;
+text-align: left;
+}
+.tr div{
+     padding-top: 15px;
+     padding-bottom: 15px;
+    border-bottom: 1px solid grey;
+}
+.blg{
+    width: 500px;
+    text-align: left;
+   
+}
+.title{
+    width: 160px;
+    text-align: left;
+   
+}
+.title1{
+    width: 160px;
+
+    text-align: left;
+}
+.status{
+width: 100px;
+text-align: left;
+}
+.statusp{
+width: 100px;
+text-align: left;
+color: green;
+}
+.actions{
+    width: 140px;
+    text-align: center;
+   
+    
+}
+.tr button{
+    padding: 5px;
+    background: transparent;
+    color: grey;
+    border: 1px solid grey;
+    font-weight: bold;
+    border-radius: 5px;
+}
+.trdiv{
+    color: grey;
+    font-weight: bold;
+}
+.trdiv img{
+    height: 25px;
+    
+}

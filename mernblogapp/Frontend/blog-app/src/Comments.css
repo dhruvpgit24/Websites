@@ -1,0 +1,58 @@
+.cmain{
+
+   
+    position: absolute;
+    right: 0;
+    width: 1205px;
+    height: 618px;
+    bottom: 0;
+    background-color: aliceblue;
+     box-shadow: 0 0 5px gray;
+     overflow-y: scroll;
+}
+.cont1{
+    width: auto;
+    height: auto;
+    background-color: white;
+    margin-top: 5%;
+    margin-left: 5%;
+    text-align: left;
+    padding-top: 1%;
+    padding-left: 3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 15px;
+    padding-bottom: 2%;
+}
+
+.cont1 p{
+    margin-top: 0;
+    font-size: larger;
+
+}
+.cont1 select{
+    padding: 10px;
+    width: 170px;
+    font-weight: bold;
+}
+.cont1 option{
+    font-weight: bold;
+   
+}
+.cont1-inp{
+    width: 550px;
+    margin-top: 5px;
+}
+.c-btn{
+   
+    width: 200px;
+    font-size: large;
+    background-color: #4500e2;
+    color: white;
+    margin-top: 8px;
+    padding: 13px;
+    border-radius: 5px;
+    border: 1px solid #4500e2;
+}

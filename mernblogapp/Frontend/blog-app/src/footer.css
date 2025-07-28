@@ -1,0 +1,110 @@
+/* Footer.css */
+
+.footer-container {
+  background-color: rgba(240, 240, 255, 0.566);
+  padding: 10px 60px;
+  font-family: sans-serif;
+  width: 100%;
+  margin-top: 6%;
+  height: 340px;
+  
+}
+
+.newsletter-section {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.newsletter-section h2 {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.newsletter-section p {
+  color: #666;
+  margin: 10px 0;
+}
+
+.newsletter-input {
+  margin-top: 20px;
+}
+
+.newsletter-input input {
+  padding: 12px 16px;
+  width: 280px;
+  border: 1px solid #ccc;
+  border-radius: 6px 0 0 6px;
+  outline: none;
+}
+
+.newsletter-input button {
+  padding: 12px 20px;
+  background-color: #6a5acd;
+  color: white;
+  border: none;
+  border-radius: 0 6px 6px 0;
+  cursor: pointer;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  color: #333;
+}
+
+.footer-column h3,
+.footer-column h4 {
+  font-weight: bolder;
+  font-size: larger;
+  margin-bottom: 15px;
+}
+.footer-column p{
+  color: gray;
+  margin-top: 20px;
+  width: 400px;
+}
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column ul li {
+  margin: 8px 0;
+  cursor: pointer;
+  color: gray;
+}
+
+.footer-column{
+    text-align:left;
+   width: 400px;
+  height: 200px;
+}
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  color: #aaa;
+  font-size: 14px;
+  border-top: 1px solid rgb(169, 169, 169);
+ padding-top: 2%;
+ font-size: large;
+ font-weight: bolder;
+}
+
+#fc1{
+text-align: left;
+width: 900px;
+
+}
+#fc1 img{
+    height: 60px;
+}
+#fc2{
+ 
+  width: 400px;
+}
+#fc3{
+  background-color: 350px;
+}

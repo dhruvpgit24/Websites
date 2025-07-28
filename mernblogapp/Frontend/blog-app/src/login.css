@@ -1,0 +1,82 @@
+.loginmain{
+width: 100%;
+height: 100vh;
+position: relative;
+
+}
+
+.login{
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+     height: 500px; 
+     width: 400px;
+     border-radius: 10px;
+     box-shadow: 0 0 12px rgba(99,102,241,0.7);
+}
+.txt-1{
+    height: auto;
+    width: 100%;
+    margin-top: 8%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6%;
+}
+.txt-1 h2{
+    font-size: xx-large;
+}
+.txt-1 span{
+    color: blueviolet;
+
+}
+.txt-1{
+    font-weight:normal;
+    font-size: larger;
+}
+.cred{
+    width: 100%;
+    height: 295px;
+  
+    margin-top: 8%;
+}
+
+.cred input{
+   height: 40px;
+   border: none;
+    border-bottom: 1px solid black;
+    width: 90%;
+    padding-left: 0;
+}
+.cred p{
+    width: 90%;
+    text-align: left;
+    margin-left: 5%;
+   font-weight:500;
+}
+
+.cred select{
+    width: 90%;
+    height: 35px;
+    font-size: medium;
+    border: none;
+    border-bottom:1px solid black ;
+   margin-top: 7px;
+}
+
+.cred button{
+    width: 90%;
+    height: 50px;
+    background-color: blueviolet;
+    margin-top: 20px;
+    border-radius: 5px;
+    color: white;
+    border: 1px solid blueviolet;
+    font-size: large;
+}
+.U-p{
+    margin-top: 2%;
+    margin-bottom: 10px;
+}

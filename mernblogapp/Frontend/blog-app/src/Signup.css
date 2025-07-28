@@ -1,0 +1,40 @@
+.signupmain{
+width: 100%;
+height: 47.3vw;
+position: relative;
+}
+.signup{
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+     height: 590px;
+     width: 400px;
+     border-radius: 10px;
+     box-shadow: 0 0 12px rgba(99,102,241,0.7);
+}
+.inpfile{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 5%;
+    margin-top: 5px; 
+    height: 80px;
+    
+}
+.inpfile img{
+    height: 40px;
+}
+.prev{
+    margin-left: 20px;
+}
+.signup button{
+    width: 90%;
+    height: 50px;
+    background-color: blueviolet;
+    border-radius: 5px;
+    color: white;
+    margin-top: 0;
+    border: 1px solid blueviolet;
+    font-size: large;
+}
