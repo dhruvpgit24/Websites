@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply text-[color:#1e1e1e] font-sans;
+    background: linear-gradient(135deg, #d3f7ce, #b5e8c2, #a0e2b8);
+  }
+}
+
+.no-scrollbar::-webkit-scrollbar{
+  display: none;
+}
