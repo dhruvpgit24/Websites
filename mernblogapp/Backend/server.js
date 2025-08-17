@@ -41,7 +41,6 @@ cloudinary.config({
 });
 console.log(cloudinary.config());
 const url = 'mongodb://localhost:27017/blog';
-// mongodb+srv://MeshwaShah2003:Admin123@cluster0.vjixrb5.mongodb.net/blog
 mongoose.connect(url)
 .then(() => console.log(`MongoDB connected`))
 .catch((err) => console.log(err));
