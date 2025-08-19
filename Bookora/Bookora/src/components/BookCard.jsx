@@ -2,7 +2,7 @@ import React from 'react';
 import '../styles/BookCard.css';
 
 const BookCard = ({ book, onClick }) => {
-  const coverId = book.cover_id || (book.cover_i || null);
+  const coverId = book.cover_id || null;
   const imageUrl = coverId
     ? `https://covers.openlibrary.org/b/id/${coverId}-M.jpg`
     : '/images/no-cover.png';
